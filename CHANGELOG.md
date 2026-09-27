@@ -10,6 +10,10 @@ Write what a person using Atlas can do now.
 
 - Install and clone URLs use the `ajdcabrera-design` GitHub org. `npm install github:ajdcabrera-design/ux-atlas` is the documented install.
 
+### Fixed
+
+- `npx ux-atlas brief` now runs correctly through npm's executable shim.
+
 ## 26 September 2026
 
 ### Added

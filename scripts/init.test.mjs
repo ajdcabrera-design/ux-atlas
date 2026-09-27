@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
@@ -60,6 +61,28 @@ test('adds the brief in the project and keeps that line across a later pointer w
   assert.equal(skill, fs.readFileSync(briefSource, 'utf8'));
   const claude = fs.readFileSync(path.join(root, 'CLAUDE.md'), 'utf8');
   assert.match(claude, new RegExp(`^${briefLine.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n`));
+});
+
+test('runs the brief command when invoked through a package bin symlink', () => {
+  const root = tempProject();
+  markInstalled(root);
+  const binDirectory = path.join(root, 'node_modules', '.bin');
+  const binPath = path.join(binDirectory, 'ux-atlas');
+  fs.mkdirSync(binDirectory, { recursive: true });
+  fs.symlinkSync(path.resolve(import.meta.dirname, 'init.mjs'), binPath);
+
+  const output = execFileSync(process.execPath, [binPath, 'brief'], {
+    cwd: root,
+    env: { ...process.env, INIT_CWD: root },
+    encoding: 'utf8',
+  });
+
+  assert.equal(output, 'Brief skill added.\n');
+  assert.equal(
+    fs.readFileSync(path.join(root, 'skills', 'brief', 'SKILL.md'), 'utf8'),
+    fs.readFileSync(briefSource, 'utf8'),
+  );
+  assert.match(fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8'), new RegExp(briefLine));
 });
 
 test('writes the brief from the directory where the package is installed', () => {

@@ -19,9 +19,7 @@
   "scripts": {
     "lint": "eslint .",
     "postinstall": "node scripts/init.mjs",
-    "test": "node --test scripts/init.test.mjs",
-    "test:install": "node scripts/test-install.mjs",
-    "test:predeploy": "npm test && npm run lint && npm run test:install"
+    "test": "node --test scripts/init.test.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

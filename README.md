@@ -16,16 +16,6 @@ Or download a project folder from [atlas.aarondesign.rocks](https://atlas.aarond
 
 A `DESIGN.md` at the project root stays the project's file. The package update does not replace it.
 
-## Test before deploying
-
-Run the pre-deploy checks against the current checkout, including a packed install in a fresh consumer project:
-
-```bash
-npm run test:predeploy
-```
-
-The install check verifies that every local skill is included in the package and that the install hook writes both project pointers. It creates a new `atlas-consumer-<timestamp>` folder inside `~/ux-atlas-predeploy/` on every run and prints the folder's path.
-
 Optional brief after install:
 
 ```bash

@@ -104,7 +104,8 @@ export function runBrief(start, sourceFile) {
 }
 
 const invokedDirectly =
-  process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+  process.argv[1] &&
+  fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url));
 
 if (invokedDirectly && process.argv.includes('brief')) {
   const source = path.join(packageRoot(), 'optional', 'brief', 'SKILL.md');
