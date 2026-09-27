@@ -4,6 +4,12 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 27 September 2026
+
+### Changed
+
+- Install and clone URLs use the `ajdcabrera-design` GitHub org. `npm install github:ajdcabrera-design/ux-atlas` is the documented install.
+
 ## 26 September 2026
 
 ### Added

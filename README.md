@@ -7,7 +7,7 @@ UX skills for agents. Machine-readable rules in `skills/<name>/SKILL.md`.
 Install into a project:
 
 ```bash
-npm install github:ajdcabrera-maker/ux-atlas
+npm install github:ajdcabrera-design/ux-atlas
 ```
 
 The install writes a pointer at the end of the project's `AGENTS.md` and `CLAUDE.md`. Those files then point at the skills in `node_modules`. Run `npm update ux-atlas` for a newer copy. If install scripts are disabled, run `npx ux-atlas init`.
@@ -26,7 +26,7 @@ npx ux-atlas brief
 
 Use this repo to improve **skills**, `instructions/`, `design-systems/`, or the install scripts. Root `AGENTS.md` / `CLAUDE.md` point agents at `skills/` when this checkout is the project root.
 
-The documentation **website** and author tooling live in a separate repo: [ux-atlas-site](https://github.com/ajdcabrera-maker/ux-atlas-site). Do not look for `site/` here.
+The documentation **website** and author tooling live in a separate repo: [ux-atlas-site](https://github.com/ajdcabrera-design/ux-atlas-site). Do not look for `site/` here.
 
 ## Skills
 
