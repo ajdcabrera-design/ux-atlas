@@ -1,8 +1,8 @@
 ---
 name: design-pipeline
-description: Turn a design request into a sequence of decisions with the person who asked. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product, and when a prompt jumps straight to a layout. Do not answer that request with an unstaged plan. Do not use for copy-only, flow-only, IA-only, or evidence-only asks. Covers framing, requirements, product class, evidence, prototyping, and high fidelity. Guided mode runs one stage at a time and waits for a decision. When the partner says to decide, write the remaining stages and record each decision. Offer Accept and Correct as a choice. After the record, ask whether to implement. Do not implement before they choose. There is no exemption. Run this before any component skill.
+description: Turn a design request into a sequence of decisions with the person who asked. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product, and when a prompt jumps straight to a layout. Do not answer that request with an unstaged plan. Do not use when one narrower skill covers the whole ask. Covers framing, requirements, product class, evidence, prototyping, and high fidelity. Guided mode runs one stage at a time and waits for a decision. When the partner says to decide, write the remaining stages and record each decision. Offer Accept and Correct as a choice. After the record, ask whether to implement. Do not implement before they choose. There is no exemption.
 metadata:
-  updated: "2026-09-26"
+  updated: "2026-09-27"
   updatedBy: Aaron Cabrera
 ---
 
@@ -14,7 +14,7 @@ Express starts when the partner says "you decide," or writes a sentence that han
 
 The partner is the person in the conversation. They decide, until they start express. The end user is the person who will use the product. They are often absent. Do not invent what either of them said, did, or preferred.
 
-The constitution judges the interface. This skill decides what to make and when it is ready. If they conflict about the interface, the constitution wins. A component skill applies only in Surface.
+The constitution judges the interface. This skill decides what to make and when it is ready. If they conflict about the interface, the constitution wins. Screen composition applies only in Surface.
 
 ## Where to start
 
@@ -78,7 +78,7 @@ Describe one flow: the steps, the primary action, and the empty, error, and exit
 - Apply the information architecture skill for the pages, the steps, the sections, and the navigation.
 - Name the alternative you rejected and why.
 - Stay at the level of structure. No visual style, no component anatomy.
-- A component skill does not apply here.
+- Screen composition does not apply here.
 - Wait for the partner to accept the flow before Check or Surface.
 
 ## 5. Check
@@ -93,10 +93,9 @@ Judge the accepted flow against the brief and the constitution.
 ## 6. Surface
 
 Specify the interface only after the partner accepts the structure.
-- Apply the constitution. Apply a component skill only for an element the screen actually needs.
-- Apply the ux-writing skill under the product class from Define. That skill settles voice and tone when needed, then the strings. Do not invent a brand voice outside it. Do not generate marketing assets.
-- Specify the states that element can be in: default, hover, focus, loading, success, and error, where those exist.
-- Use the product's existing visual language. Do not invent a one-off system.
+- Apply the constitution.
+- Apply the screen-composition skill for regions, components, states, and reflow from the project's design system.
+- Then apply the ux-writing skill under the product class from Define. That skill settles voice and tone when needed, then the strings. Do not invent a brand voice outside it. Do not generate marketing assets.
 - Leave unresolved questions listed. Do not hide them in the mock.
 
 ## Optional moves
@@ -122,6 +121,6 @@ Propose a test with end users before calling a new or critical flow done.
 
 ## Record
 
-When the partner asks for the record, or accepts Surface, give them the problem, the product class, the scope, the decisions, the flow, the interface, the open questions, and what was not tested.
+When the partner asks for the record, or accepts Surface, give them the problem, the product class, the scope, the decisions, the flow, the composition, the system gaps, the interface, the open questions, and what was not tested.
 
 Then ask whether to implement that record. Use the constitution's choice rules. The options are Implement the record, and Leave the record. Do not implement before they choose. A sentence that chooses the approach is not a choice to implement.

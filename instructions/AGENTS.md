@@ -2,9 +2,9 @@ Skills live in `node_modules/ux-atlas/skills/**/SKILL.md`. Each file's `name` an
 
 Read only the name and description. When a description matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”
 
-Keep the path small. A copy-only, flow-only, IA-only, or evidence-only ask does not start the design pipeline.
+Keep the path small. When one narrower skill covers the whole ask, use it alone. Start the design pipeline only when the ask needs more than one of them, or changes what to build.
 
-If a `DESIGN.md` is at the project root, follow it for terminology, casing, and a length limit. Follow it for those three. Do not replace that file when UX Atlas updates.
+A file named exactly `DESIGN.md` at the project root is the project's design system. Follow what it states. Do not assume what it does not.
 
 ## Always on
 

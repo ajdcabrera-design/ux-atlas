@@ -6,6 +6,10 @@ Write what a person using Atlas can do now.
 
 ## 27 September 2026
 
+### Added
+
+- Screen composition. A request to compose a screen can use the project's design system, existing codebase primitives, or clearly marked industry-standard assumptions.
+
 ### Changed
 
 - Install and clone URLs use the `ajdcabrera-design` GitHub org. `npm install github:ajdcabrera-design/ux-atlas` is the documented install.
