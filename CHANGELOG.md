@@ -12,6 +12,7 @@ Write what a person using Atlas can do now.
 
 ### Changed
 
+- Design-system gaps can be handed off in a project-root `DESIGN_GAPS.md` register for technical triage, with unresolved decisions marked Pending.
 - Install and clone URLs use the `ajdcabrera-design` GitHub org. `npm install github:ajdcabrera-design/ux-atlas` is the documented install.
 
 ### Fixed

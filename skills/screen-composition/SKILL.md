@@ -83,4 +83,4 @@ For each region, list the states it has: default, loading, empty, error, and suc
 
 Name the composition you rejected in one line. Do not write strings.
 
-When this skill is used on its own, stop after the composition. Do not change the product. The constitution asks before any change. During the design pipeline, hand the composition to Surface and do not ask to implement here.
+When this skill is used on its own, stop after this handback. Do not change the product. If there is a system gap, apply the constitution's design system gaps section: offer the register now, in this same reply. During the design pipeline, hand the composition and any system gaps to Surface, then to Record, and do not offer the register here.

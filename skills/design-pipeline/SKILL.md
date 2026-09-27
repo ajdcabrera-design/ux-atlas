@@ -123,4 +123,6 @@ Propose a test with end users before calling a new or critical flow done.
 
 When the partner asks for the record, or accepts Surface, give them the problem, the product class, the scope, the decisions, the flow, the composition, the system gaps, the interface, the open questions, and what was not tested.
 
-Then ask whether to implement that record. Use the constitution's choice rules. The options are Implement the record, and Leave the record. Do not implement before they choose. A sentence that chooses the approach is not a choice to implement.
+If the composition carried a system gap, apply the constitution's design system gaps section here: offer to write the register in this reply. Do not ask whether to implement in the same turn. After the partner decides about the register and any accepted file change is complete, ask whether to implement the record in a later turn.
+
+If there is no system gap, ask whether to implement the record now. Use the constitution's choice rules. The options are Implement the record, and Leave the record. Do not implement before they choose. A sentence that chooses the approach is not a choice to implement.
