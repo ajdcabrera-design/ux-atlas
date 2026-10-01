@@ -22,6 +22,7 @@ The constitution judges the interface. This skill decides what to make and when 
 - A request to discuss, plan, or change the UI starts at Frame. Do not replace this stage with an unstaged plan.
 - A request that only asks for interface words, with no change to the flow or the screen, is not a design request. Do not start this skill.
 - A new request with no agreed problem starts at Frame.
+- A request that does not settle the kind of product, who it is for, or what should change starts with the product-direction skill at Frame. The chosen direction is the accepted Frame.
 - If the partner has already confirmed a stage, start at the next open one and name it.
 - A critique of an existing design starts at Check.
 - A request to raise fidelity starts at Surface only after the partner has accepted the structure. Otherwise restate the structure and ask to accept it.
@@ -33,7 +34,7 @@ The stops are Frame, Define, Scope, Structure, Check, and Surface, in that order
 
 The waits under each stage are guided stops. In express, skip the wait. End a decision with "Decided:" and the decision. End an assumption with "Assumed:" and the assumption. A question only the partner knows stays a typed question in guided mode. In express it becomes an assumption. Do not turn it into Accept or Correct.
 
-Evidence, Another direction, and Test are optional. Propose one only when its rule says to. Say why, what you will do, and what you need from the partner. If they skip it, record the assumption and continue. Do not run it in silence.
+Evidence, Another structure, and Test are optional. Propose one only when its rule says to. Say why, what you will do, and what you need from the partner. If they skip it, record the assumption and continue. Do not run it in silence.
 
 Ask one question. Ask only what you cannot responsibly assume. State every assumption you are keeping.
 
@@ -107,7 +108,7 @@ Propose grounding when the audience is unknown, Define changed the problem, the 
 - Skip it when the partner already has enough evidence for this decision, or the change sits inside a pattern they already accepted.
 - If they cannot provide answers or files, record the gap and the residual risk. Partner Accept of an assumption is not a usability test.
 
-### Another direction
+### Another structure
 Propose a second structure when Define changed the problem, or more than one structure could satisfy the scope.
 - A second structure is a different flow, not a different color.
 - Skip it when one familiar pattern fits and the partner has accepted it.

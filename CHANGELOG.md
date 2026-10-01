@@ -4,6 +4,17 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 1 October 2026
+
+### Added
+
+- Product direction. Open-ended product asks can compare and choose an overall direction before framing the problem.
+
+### Changed
+
+- The design pipeline starts with product direction when the kind of product, its audience, or the desired change is unsettled. A chosen direction is the accepted Frame.
+- Screen composition applies only after both the user flow and information architecture are settled.
+
 ## 27 September 2026
 
 ### Added
