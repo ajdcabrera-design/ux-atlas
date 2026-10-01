@@ -21,6 +21,29 @@ ${END}
 export const briefLine =
   'On every request, with no exemption, read `skills/brief/SKILL.md` and follow it before any other skill. It does not choose the next skill.';
 
+export const recordConfig = '{\n  "record": "ask"\n}\n';
+
+export const recordGuide = [
+  '# UX Atlas record',
+  '',
+  'UX Atlas can keep a living record of design decisions, assumptions, trade-offs, and open design-system gaps.',
+  '',
+  'Change `.atlas/config.json` to choose when the record is written:',
+  '',
+  '```json',
+  '{',
+  '  "record": "ask"',
+  '}',
+  '```',
+  '',
+  '- `ask` is the default. Atlas asks before writing the record.',
+  '- `on` writes the record automatically after an eligible run.',
+  '- `off` leaves the record in the reply and writes no record files.',
+  '',
+  'The record lives in `.atlas/runs/`, with active decisions in `.atlas/decisions.md` and open gaps in `DESIGN_GAPS.md`.',
+  '',
+].join('\n');
+
 function packageRoot() {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 }
@@ -58,6 +81,15 @@ export function applyPointers(projectRoot) {
   upsert(agents, agentsBlock);
   if (sameFile(agents, claude)) return;
   upsert(claude, claudeBlock);
+}
+
+export function ensureRecordConfig(projectRoot) {
+  const directory = path.join(projectRoot, '.atlas');
+  const filePath = path.join(directory, 'config.json');
+  fs.mkdirSync(directory, { recursive: true });
+  if (!fs.existsSync(filePath)) fs.writeFileSync(filePath, recordConfig);
+  const guidePath = path.join(directory, 'README.md');
+  if (!fs.existsSync(guidePath)) fs.writeFileSync(guidePath, recordGuide);
 }
 
 function ensureBriefLine(filePath) {
@@ -118,6 +150,7 @@ if (invokedDirectly && process.argv.includes('brief')) {
 } else if (invokedDirectly && !shouldSkip()) {
   try {
     applyPointers(resolveProjectRoot());
+    ensureRecordConfig(resolveProjectRoot());
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     console.error(`ux-atlas: could not write the project pointer. ${message}`);

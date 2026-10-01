@@ -9,11 +9,13 @@ Write what a person using Atlas can do now.
 ### Added
 
 - Product direction. Open-ended product asks can compare and choose an overall direction before framing the problem.
+- Design record. Decisions, assumptions, trade-offs, and open design-system gaps can persist as a bounded living record, with `ask` as the default write setting.
 
 ### Changed
 
 - The design pipeline starts with product direction when the kind of product, its audience, or the desired change is unsettled. A chosen direction is the accepted Frame.
 - Screen composition applies only after both the user flow and information architecture are settled.
+- The design pipeline hands accepted decisions and system gaps to the design record instead of maintaining a separate gap-only lifecycle.
 
 ## 27 September 2026
 

@@ -9,8 +9,11 @@ import {
   applyPointers,
   briefLine,
   claudeBlock,
+  ensureRecordConfig,
   findInstalledRoot,
+  recordGuide,
   runBrief,
+  recordConfig,
 } from './init.mjs';
 
 const briefSource = path.resolve(import.meta.dirname, '../optional/brief/SKILL.md');
@@ -41,6 +44,24 @@ test('keeps existing text and does not duplicate the pointer', () => {
   assert.match(text, /^# Project\n\nShip on Friday\.\n/);
   assert.equal(text.split('<!-- ux-atlas -->').length, 2);
   assert.match(text, /node_modules\/ux-atlas\/skills\/\*\*\/SKILL\.md/);
+});
+
+test('creates the committed record configuration with ask as the default', () => {
+  const root = tempProject();
+  ensureRecordConfig(root);
+  assert.equal(fs.readFileSync(path.join(root, '.atlas', 'config.json'), 'utf8'), recordConfig);
+  assert.equal(fs.readFileSync(path.join(root, '.atlas', 'README.md'), 'utf8'), recordGuide);
+});
+
+test('preserves an existing record configuration', () => {
+  const root = tempProject();
+  const directory = path.join(root, '.atlas');
+  const filePath = path.join(directory, 'config.json');
+  fs.mkdirSync(directory);
+  fs.writeFileSync(filePath, '{"record":"off"}\n');
+  ensureRecordConfig(root);
+  assert.equal(fs.readFileSync(filePath, 'utf8'), '{"record":"off"}\n');
+  assert.equal(fs.readFileSync(path.join(directory, 'README.md'), 'utf8'), recordGuide);
 });
 
 test('adds the brief in the project and keeps that line across a later pointer write', () => {

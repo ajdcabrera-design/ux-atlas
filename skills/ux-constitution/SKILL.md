@@ -1,6 +1,6 @@
 ---
 name: ux-constitution
-description: Foundational UX rules for interaction, psychology, perception, and accessibility. Use for any interface work, and when no narrower skill covers the task. Covers feedback, errors, labels, exits, targets, contrast, focus, and semantic HTML. After a skill would execute, implement, or change the interface or the flow, stop and ask before changing the product. Owns the Choice block every skill uses for an explicit partner stop, and the DESIGN_GAPS.md register for system gaps handed off by skills. There is no exemption.
+description: Foundational UX rules for interaction, psychology, perception, and accessibility. Use for any interface work, and when no narrower skill covers the task. Covers feedback, errors, labels, exits, targets, contrast, focus, and semantic HTML. After a skill would execute, implement, or change the interface or the flow, stop and ask before changing the product. Owns the Choice block every skill uses for an explicit partner stop. Skills hand decisions, assumptions, and system gaps to design-record. There is no exemption.
 metadata:
   updated: "2026-09-27"
   updatedBy: Aaron Cabrera
@@ -219,21 +219,6 @@ Before changing the product, when no narrower skill names the options, use these
 
 A reply of 1, the first option's label, or the picker's first option, accepts. A reply of 2, the second option's label, or the picker's second option, declines or corrects. Any other answer is typed. Treat it as continuing the current work, not as acceptance.
 
-## 6. Design system gaps
+## 6. Design record
 
-A narrower skill may find that the project's design source has no token, component, state, or breakpoint for something it needs. That skill records the gap. This section owns where it is kept.
-
-- The register is one file at the project root: `DESIGN_GAPS.md`.
-- One entry per gap:
-  - ID
-  - Found by: the skill and the stage
-  - Gap and impact: what the source lacks, and what it affects
-  - Assumed: the interim value the skill used, or `None`
-  - Triage: Pending, Extend the design system, Accept as known gap, or Revisit Surface
-  - Owner: the person or team responsible; use `Unassigned` if unknown
-  - Revisit when: the trigger that should bring the author back to Surface; use `TBD` if triage has not decided
-- Update an existing entry by its ID. Do not duplicate it.
-- New gaps start as Pending unless the partner provides a triage decision. Do not choose for the project.
-- Offer to create or update the file only once the skill that found the gap has produced its full output for the turn. A skill running on its own offers it right after that output. A skill running inside the design pipeline holds the gap until the pipeline's Record, then offers it there. The pipeline must not offer another decision in that turn.
-- After the partner decides whether to write the register, complete any accepted file change. The pipeline may offer its implementation choice in a later turn.
-- Use the Confirmation choice above before writing or changing the file. Name the options "Write to DESIGN_GAPS.md" and "Leave it in this reply."
+When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`. That skill owns the living record and `DESIGN_GAPS.md` lifecycle. Use this constitution's Confirmation choice before writing any record file.

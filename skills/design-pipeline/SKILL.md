@@ -27,6 +27,7 @@ The constitution judges the interface. This skill decides what to make and when 
 - A critique of an existing design starts at Check.
 - A request to raise fidelity starts at Surface only after the partner has accepted the structure. Otherwise restate the structure and ask to accept it.
 - When the partner is answering the question you asked, continue that stage. Do not restart at Frame.
+- Before choosing a stage, read `.atlas/decisions.md` and the open gaps that overlap the request through `design-record`. Do not load the run history unless the partner asks for it.
 
 ## How to move
 
@@ -124,6 +125,6 @@ Propose a test with end users before calling a new or critical flow done.
 
 When the partner asks for the record, or accepts Surface, give them the problem, the product class, the scope, the decisions, the flow, the composition, the system gaps, the interface, the open questions, and what was not tested.
 
-If the composition carried a system gap, apply the constitution's design system gaps section here: offer to write the register in this reply. Do not ask whether to implement in the same turn. After the partner decides about the register and any accepted file change is complete, ask whether to implement the record in a later turn.
+Hand the full record and any system gaps to `design-record`. It owns the run log, active decision summary, and open-gap register. Do not offer a separate gap-register choice in this turn.
 
-If there is no system gap, ask whether to implement the record now. Use the constitution's choice rules. The options are Implement the record, and Leave the record. Do not implement before they choose. A sentence that chooses the approach is not a choice to implement.
+After the record is written or left in the reply, ask whether to implement the product change. Use the constitution's choice rules. The options are Implement the change, and Leave the change. Do not implement before they choose. A sentence that chooses the approach is not a choice to implement.

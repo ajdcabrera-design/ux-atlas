@@ -22,6 +22,22 @@ Optional brief after install:
 npx ux-atlas brief
 ```
 
+## Record settings
+
+The install creates `.atlas/config.json` and `.atlas/README.md`. Set `record` to control when UX Atlas writes its living design record:
+
+```json
+{
+	"record": "ask"
+}
+```
+
+- `ask` is the default and asks before writing.
+- `on` writes eligible records automatically.
+- `off` keeps the record in the reply and writes no record files.
+
+The record uses `.atlas/runs/` for history, `.atlas/decisions.md` for active decisions, and `DESIGN_GAPS.md` for open gaps. Edit `.atlas/config.json` directly; no CLI override is currently provided.
+
 ## Fork or clone (contribute)
 
 Use this repo to improve **skills**, `instructions/`, `design-systems/`, or the install scripts. Root `AGENTS.md` / `CLAUDE.md` point agents at `skills/` when this checkout is the project root.
