@@ -224,9 +224,9 @@ Do not present the choice before the work is written. Do not send the choice in 
 
 Use the option labels the calling skill defines. Keep those labels the same on every host. Present the choice in exactly one of these ways. Never both in the same turn.
 
-**Host picker.** When the host offers a picker for those options (for example `AskQuestion`), use it after the work text, with those same labels. Do not print the Choice block. Do not also ask them to type 1 or 2. One decision, one control.
+**Host picker.** When the host offers a picker for those options (for example `AskQuestion`), use it after the work text, with those same labels. **The picker's message field must be empty or contain only the choice labels.** Do not put the proposal, assumptions, or phase work in the picker message field — that content belongs in the conversation text stream where it is guaranteed visible. Do not print the Choice block. Do not also ask them to type 1 or 2. One decision, one control.
 
-**Choice block.** When the picker is missing or fails, present the choice like this. Do not invent a third pattern. Do not replace this with free-form "please confirm" wording.
+**Choice block.** When the picker is missing or fails, or when the host picker cannot reliably display the proposal alongside the choices, present the choice like this. Do not invent a third pattern. Do not replace this with free-form "please confirm" wording.
 
 ```
 Choice
