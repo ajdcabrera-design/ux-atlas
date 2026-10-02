@@ -1,6 +1,6 @@
 ---
 name: design-pipeline
-description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product \u2014 AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage/turn). Express only when partner says \"you decide\". Hands to design-record at end. Constitution owns Confirmation choice."
+description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product \u2014 AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only when partner says \"you decide\". Hands to design-record at end. Constitution owns Confirmation choice."
 triggers:
   - "design"
   - "redesign"
@@ -31,7 +31,9 @@ metadata:
 
 Run this on any request to design, redesign, critique, or add a screen, flow, or feature.
 
-Guided is the default. Do one stage per turn. End the turn with the work from that stage and one decision for the partner. Do not start the next stage in the same turn.
+Guided is the default. Write one stage, then stop at its decision. End the stage with its work and one choice.
+
+The pause is for the choice only. A host picker returns the answer inside the same turn. A typed answer arrives as the next message. Either way, on Accept, write the next open stage in that same response. Do not reply with only an acknowledgement. Do not wait for another prompt. On Correct, stay on the stage. Never write a later stage before the current one is accepted.
 
 Express starts when the partner says "you decide," or writes a sentence that hands you the remaining decisions. Begin with "Deciding the remaining stages." Write the open stage, then each following stage, in that same turn. Each stage is its own block. Do not fold them into one result. Do not start express before they ask. The turn ends at the record, after Surface. Then ask whether to implement. Do not implement in that turn. Deciding the approach is not a choice to implement.
 

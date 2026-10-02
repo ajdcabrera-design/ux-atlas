@@ -241,6 +241,8 @@ Before changing the product, when no narrower skill names the options, use these
 
 A reply of 1, the first option's label, or the picker's first option, accepts. A reply of 2, the second option's label, or the picker's second option, declines or corrects. Any other answer is typed. Treat it as continuing the current work, not as acceptance.
 
+A picker answer is the partner's reply. Act on it in the same response. Do not end on an acknowledgement.
+
 ## 6. Design record
 
 When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`. That skill owns the living record and `DESIGN_GAPS.md` lifecycle. Use this constitution's Confirmation choice before writing any record file — except when `record: "on"`, where design-record writes without a choice because record writes are not product changes.

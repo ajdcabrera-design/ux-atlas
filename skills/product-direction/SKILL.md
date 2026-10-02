@@ -75,5 +75,5 @@ A typed answer that names a direction, or combines two, chooses it. Restate the 
 ## Handoff
 
 - On its own: stop after the choice. Do not start the design pipeline. Do not change the product.
-- During the design pipeline: the chosen direction is the accepted Frame. Its kind is Assumed for Define. Continue at Define on the next turn. Do not repeat Frame.
+- During the design pipeline: the chosen direction is the accepted Frame. Its kind is Assumed for Define. Continue at Define in the same response. Do not repeat Frame.
 - In express: take the recommended direction, mark it "Assumed:", and continue with the pipeline.

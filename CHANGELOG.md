@@ -14,6 +14,7 @@ Write what a person using Atlas can do now.
 
 ### Changed
 
+- Accepting a guided design decision now starts the next open stage in the same response.
 - Skill routing now uses explicit triggers, exclusions, and token budgets so focused requests can use a narrower skill without loading unrelated guidance.
 - Project instructions include the core UX thresholds and point to the extended constitution for edge cases.
 - Intake replaces the optional brief skill. `npx ux-atlas brief` and the brief choice on the project-folder download are gone. An install removes the old brief line from AGENTS.md and CLAUDE.md.
