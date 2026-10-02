@@ -45,7 +45,7 @@ This is the **express variant** of the design pipeline. It runs only when the pa
 - In / out / later list (Scope)
 - Flow: job, entry, main path, empty, error, cancel, exit (user-flow)
 - Places: pages, steps, sections, navigation (information-architecture)
-- Check against brief + constitution. If fails, return to Frame.
+- Check against accepted Frame + constitution. If fails, return to Frame.
 - End with: **Accept Structure / Correct Structure**
 
 ### 3. Surface

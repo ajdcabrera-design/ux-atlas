@@ -1,3 +1,5 @@
+On every request, with no exemption, run `node_modules/ux-atlas/skills/intake/SKILL.md` before any other skill. Read it once; when its body is already in context, apply it without reading the file again. Match skill descriptions against its prompt, not the raw message.
+
 Skills live in `node_modules/ux-atlas/skills/**/SKILL.md`. Each file's `name` and `description` are the disclosure layer. The body is the rule set.
 
 Read only the name and description. When a description matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”

@@ -29,7 +29,7 @@ The partner is the person in the conversation. They decide. The end user is the 
 
 ## When to run
 
-Read the request, the brief's open points, earlier turns, and the project, including a `DESIGN.md` at the project root. Check three things.
+Read the request, this turn's intake prompt and its open points, earlier turns, and the project, including a `DESIGN.md` at the project root. Check three things.
 
 1. **Kind.** What kind of product this is, for example booking-led, showcase-led, task-led, or reading-led.
 2. **Who.** Who it is for, and how much is at stake for them.

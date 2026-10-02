@@ -8,6 +8,7 @@ Write what a person using Atlas can do now.
 
 ### Added
 
+- Intake. A silent skill now runs first on every request, in the package and in the project folder. It turns the request into an internal prompt that skill selection reads, so a raw prompt is less likely to start the wrong skill.
 - The Design Pipeline (Fast). Experienced partners can opt into a three-stop Express path: Frame, Structure, and Surface. Guided remains the default.
 - The UX Constitution (Core) and UX Constitution (Extended). Interface work gets concise foundational rules, with advanced cases available when needed.
 
@@ -15,6 +16,8 @@ Write what a person using Atlas can do now.
 
 - Skill routing now uses explicit triggers, exclusions, and token budgets so focused requests can use a narrower skill without loading unrelated guidance.
 - Project instructions include the core UX thresholds and point to the extended constitution for edge cases.
+- Intake replaces the optional brief skill. `npx ux-atlas brief` and the brief choice on the project-folder download are gone. An install removes the old brief line from AGENTS.md and CLAUDE.md.
+- The design pipeline's Check judges against the accepted Frame and Define, not a hidden prompt.
 
 ## 1 October 2026
 

@@ -41,7 +41,7 @@ The constitution judges the interface. This skill decides what to make and when 
 
 ## Where to start
 
-- A brief has already restated the request. Use that restatement. Do not show it again. Choose the stage with the rules below. The brief does not choose this skill.
+- Start from this turn's intake prompt. Do not show it. Choose the stage with the rules below. Intake does not choose this skill.
 - A request to discuss, plan, or change the UI starts at Frame. Do not replace this stage with an unstaged plan.
 - A request that only asks for interface words, with no change to the flow or the screen, is not a design request. Do not start this skill.
 - A new request with no agreed problem starts at Frame.
@@ -108,7 +108,7 @@ Describe one flow: the steps, the primary action, and the empty, error, and exit
 
 ## 5. Check
 
-Judge the accepted flow against the brief and the constitution.
+Judge the accepted flow against the accepted Frame and Define and the constitution.
 - Say what passed and what failed. Name the constitution rule when one fails.
 - If the structure fights the product class from Define, it fails. Return to Define or Structure.
 - If it fails, return to Define or Structure and say which.

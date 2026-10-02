@@ -18,8 +18,11 @@ export const claudeBlock = `${START}
 ${END}
 `;
 
-export const briefLine =
+// Written by `npx ux-atlas brief` before intake shipped in the package.
+export const legacyBriefLine =
   'On every request, with no exemption, read `skills/brief/SKILL.md` and follow it before any other skill. It does not choose the next skill.';
+
+export const briefRemovedMessage = 'Intake is now part of the package. Nothing to add.';
 
 export const recordConfig = '{\n  "record": "ask"\n}\n';
 
@@ -75,11 +78,20 @@ function sameFile(left, right) {
   return a.dev === b.dev && a.ino === b.ino;
 }
 
+function removeLegacyBriefLine(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  const existing = fs.readFileSync(filePath, 'utf8');
+  if (!existing.includes(legacyBriefLine)) return;
+  fs.writeFileSync(filePath, existing.split(legacyBriefLine).join('').replace(/^\n+/, ''));
+}
+
 export function applyPointers(projectRoot) {
   const agents = path.join(projectRoot, 'AGENTS.md');
   const claude = path.join(projectRoot, 'CLAUDE.md');
+  removeLegacyBriefLine(agents);
   upsert(agents, agentsBlock);
   if (sameFile(agents, claude)) return;
+  removeLegacyBriefLine(claude);
   upsert(claude, claudeBlock);
 }
 
@@ -92,61 +104,12 @@ export function ensureRecordConfig(projectRoot) {
   if (!fs.existsSync(guidePath)) fs.writeFileSync(guidePath, recordGuide);
 }
 
-function ensureBriefLine(filePath) {
-  const existing = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : '';
-  if (existing.includes(briefLine)) return;
-  const body = existing.length === 0 ? '' : `\n${existing.replace(/^\n/, '')}`;
-  let next = `${briefLine}\n${body}`;
-  if (!next.endsWith('\n')) next += '\n';
-  fs.writeFileSync(filePath, next);
-}
-
-export function installBrief(projectRoot, sourceFile) {
-  const destination = path.join(projectRoot, 'skills', 'brief', 'SKILL.md');
-  fs.mkdirSync(path.dirname(destination), { recursive: true });
-  fs.copyFileSync(sourceFile, destination);
-  const agents = path.join(projectRoot, 'AGENTS.md');
-  const claude = path.join(projectRoot, 'CLAUDE.md');
-  ensureBriefLine(agents);
-  applyPointers(projectRoot);
-  if (!sameFile(agents, claude)) ensureBriefLine(claude);
-}
-
-export function findInstalledRoot(start) {
-  let dir = path.resolve(start);
-  const stop = path.parse(dir).root;
-  while (true) {
-    if (fs.existsSync(path.join(dir, 'node_modules', 'ux-atlas', 'package.json'))) return dir;
-    if (dir === stop) return null;
-    const parent = path.dirname(dir);
-    if (parent === dir) return null;
-    dir = parent;
-  }
-}
-
-export function runBrief(start, sourceFile) {
-  const projectRoot = findInstalledRoot(start);
-  if (!projectRoot) return { ok: false, message: 'Install the package first.' };
-  try {
-    installBrief(projectRoot, sourceFile);
-    return { ok: true, message: 'Brief skill added.' };
-  } catch {
-    return { ok: false, message: 'Could not add the brief skill.' };
-  }
-}
-
 const invokedDirectly =
   process.argv[1] &&
   fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url));
 
 if (invokedDirectly && process.argv.includes('brief')) {
-  const source = path.join(packageRoot(), 'optional', 'brief', 'SKILL.md');
-  const result = runBrief(resolveProjectRoot(), source);
-  if (result.ok) console.log(result.message);
-  else {
-    console.error(result.message);
-    process.exitCode = 1;
-  }
+  console.log(briefRemovedMessage);
 } else if (invokedDirectly && !shouldSkip()) {
   try {
     applyPointers(resolveProjectRoot());

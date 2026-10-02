@@ -7,8 +7,7 @@
   "files": [
     "skills",
     "instructions",
-    "scripts",
-    "optional/brief"
+    "scripts"
   ],
   "bin": {
     "ux-atlas": "./scripts/init.mjs"

@@ -7,22 +7,13 @@ import assert from 'node:assert/strict';
 import {
   agentsBlock,
   applyPointers,
-  briefLine,
+  briefRemovedMessage,
   claudeBlock,
   ensureRecordConfig,
-  findInstalledRoot,
+  legacyBriefLine,
   recordGuide,
-  runBrief,
   recordConfig,
 } from './init.mjs';
-
-const briefSource = path.resolve(import.meta.dirname, '../optional/brief/SKILL.md');
-
-function markInstalled(root) {
-  const dir = path.join(root, 'node_modules', 'ux-atlas');
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'package.json'), '{"name":"ux-atlas"}\n');
-}
 
 function tempProject() {
   return fs.mkdtempSync(path.join(os.tmpdir(), 'ux-atlas-init-'));
@@ -64,73 +55,47 @@ test('preserves an existing record configuration', () => {
   assert.equal(fs.readFileSync(path.join(directory, 'README.md'), 'utf8'), recordGuide);
 });
 
-test('adds the brief in the project and keeps that line across a later pointer write', () => {
+test('removes the legacy brief line from both files and keeps the rest', () => {
   const root = tempProject();
-  markInstalled(root);
-  fs.writeFileSync(path.join(root, 'AGENTS.md'), '# Project\n');
-  const first = runBrief(root, briefSource);
-  const again = runBrief(root, briefSource);
+  fs.writeFileSync(path.join(root, 'AGENTS.md'), `${legacyBriefLine}\n\n# Project\n`);
+  fs.writeFileSync(path.join(root, 'CLAUDE.md'), `${legacyBriefLine}\n# Notes\n`);
   applyPointers(root);
-  const text = fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8');
-  const skill = fs.readFileSync(path.join(root, 'skills', 'brief', 'SKILL.md'), 'utf8');
-  assert.equal(first.ok, true);
-  assert.equal(first.message, 'Brief skill added.');
-  assert.equal(again.message, 'Brief skill added.');
-  assert.equal(text.split(briefLine).length, 2);
-  assert.match(text, new RegExp(`^${briefLine.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n`));
-  assert.equal(text.split('<!-- ux-atlas -->').length, 2);
-  assert.equal(skill, fs.readFileSync(briefSource, 'utf8'));
+  const agents = fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8');
   const claude = fs.readFileSync(path.join(root, 'CLAUDE.md'), 'utf8');
-  assert.match(claude, new RegExp(`^${briefLine.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n`));
+  assert.equal(agents.includes(legacyBriefLine), false);
+  assert.equal(claude.includes(legacyBriefLine), false);
+  assert.match(agents, /^# Project\n/);
+  assert.match(claude, /^# Notes\n/);
+  assert.equal(agents.split('<!-- ux-atlas -->').length, 2);
 });
 
-test('runs the brief command when invoked through a package bin symlink', () => {
+test('leaves a user skills/brief folder in place', () => {
   const root = tempProject();
-  markInstalled(root);
-  const binDirectory = path.join(root, 'node_modules', '.bin');
-  const binPath = path.join(binDirectory, 'ux-atlas');
-  fs.mkdirSync(binDirectory, { recursive: true });
-  fs.symlinkSync(path.resolve(import.meta.dirname, 'init.mjs'), binPath);
+  const skill = path.join(root, 'skills', 'brief', 'SKILL.md');
+  fs.mkdirSync(path.dirname(skill), { recursive: true });
+  fs.writeFileSync(skill, 'mine\n');
+  applyPointers(root);
+  assert.equal(fs.readFileSync(skill, 'utf8'), 'mine\n');
+});
 
-  const output = execFileSync(process.execPath, [binPath, 'brief'], {
+test('the brief command says intake is included and writes nothing', () => {
+  const root = tempProject();
+  const output = execFileSync(process.execPath, [path.resolve(import.meta.dirname, 'init.mjs'), 'brief'], {
     cwd: root,
     env: { ...process.env, INIT_CWD: root },
     encoding: 'utf8',
   });
-
-  assert.equal(output, 'Brief skill added.\n');
-  assert.equal(
-    fs.readFileSync(path.join(root, 'skills', 'brief', 'SKILL.md'), 'utf8'),
-    fs.readFileSync(briefSource, 'utf8'),
-  );
-  assert.match(fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8'), new RegExp(briefLine));
-});
-
-test('writes the brief from the directory where the package is installed', () => {
-  const root = tempProject();
-  markInstalled(root);
-  const nested = path.join(root, 'src');
-  fs.mkdirSync(nested);
-  const result = runBrief(nested, briefSource);
-  assert.equal(result.ok, true);
-  assert.equal(findInstalledRoot(nested), root);
-  assert.equal(fs.existsSync(path.join(root, 'skills', 'brief', 'SKILL.md')), true);
-  assert.equal(fs.existsSync(path.join(nested, 'skills', 'brief', 'SKILL.md')), false);
-});
-
-test('asks for the package install when ux-atlas is not installed', () => {
-  const root = tempProject();
-  const result = runBrief(root, briefSource);
-  assert.deepEqual(result, { ok: false, message: 'Install the package first.' });
-  assert.equal(fs.existsSync(path.join(root, 'skills', 'brief', 'SKILL.md')), false);
-});
-
-test('reports a failed brief write without adding a second line', () => {
-  const root = tempProject();
-  markInstalled(root);
-  const result = runBrief(root, path.join(root, 'missing-brief.md'));
-  assert.deepEqual(result, { ok: false, message: 'Could not add the brief skill.' });
+  assert.equal(output, `${briefRemovedMessage}\n`);
   assert.equal(fs.existsSync(path.join(root, 'AGENTS.md')), false);
+  assert.equal(fs.existsSync(path.join(root, 'skills')), false);
+});
+
+test('ships the intake skill and points instructions at it', () => {
+  const pkg = path.resolve(import.meta.dirname, '..');
+  assert.equal(fs.existsSync(path.join(pkg, 'skills', 'intake', 'SKILL.md')), true);
+  assert.equal(fs.existsSync(path.join(pkg, 'optional', 'brief')), false);
+  const instructions = fs.readFileSync(path.join(pkg, 'instructions', 'AGENTS.md'), 'utf8');
+  assert.match(instructions.split('\n')[0], /skills\/intake\/SKILL\.md/);
 });
 
 test('leaves a shared AGENTS.md and CLAUDE.md file as one pointer', () => {

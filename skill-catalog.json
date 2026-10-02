@@ -1,6 +1,16 @@
 {
   "version": "2026-10-02",
   "skills": {
+    "intake": {
+      "title": "Intake",
+      "section": "foundations",
+      "order": 5,
+      "description": "Always on. Runs first on every request and rewrites it into an internal prompt that skill selection reads. Not selected by description match.",
+      "triggers": [],
+      "excludes": [],
+      "alwaysOn": true,
+      "tokenBudget": { "summary": 30, "body": 220 }
+    },
     "ux-constitution-core": {
       "title": "The UX Constitution (Core)",
       "section": "foundations",

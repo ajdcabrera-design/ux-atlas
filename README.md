@@ -16,11 +16,7 @@ Or download a project folder from [atlas.aarondesign.rocks](https://atlas.aarond
 
 A `DESIGN.md` at the project root stays the project's file. The package update does not replace it.
 
-Optional brief after install:
-
-```bash
-npx ux-atlas brief
-```
+The intake skill ships in the package and runs first on every request. There is nothing to opt into.
 
 ## Record settings
 
