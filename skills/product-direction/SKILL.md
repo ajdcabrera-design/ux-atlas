@@ -1,8 +1,25 @@
 ---
 name: product-direction
 description: Set the overall design direction for an open-ended product ask. Offer two or three candidate directions, recommend one, and let the partner choose. Use when the prompt does not settle what kind of product it is, who it is for, or what should change, for example "what is the best approach for…", "design me an app for…", or "how can I improve this" with no goal. Do not use when the prompt or the project already settles those, or when a stage of the design pipeline has been accepted. During a design pipeline, apply only at Frame. A direction-only request does not start the design pipeline. Do not decide tone, scope, features, or layout.
+triggers:
+  - "product direction"
+  - "what kind of product"
+  - "best approach"
+  - "design me an app"
+  - "how can I improve"
+  - "open-ended product"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "IA-only"
+  - "evidence-only"
+  - "screen design"
+  - "specific feature"
+tokenBudget:
+  summary: 50
+  body: 700
 metadata:
-  updated: "2026-10-01"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

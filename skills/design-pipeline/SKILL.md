@@ -1,8 +1,31 @@
 ---
 name: design-pipeline
-description: Turn a design request into a sequence of decisions with the person who asked. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product, and when a prompt jumps straight to a layout. Do not answer that request with an unstaged plan. Do not use when one narrower skill covers the whole ask. Covers framing, requirements, product class, evidence, prototyping, and high fidelity. Guided mode runs one stage at a time and waits for a decision. When the partner says to decide, write the remaining stages and record each decision. Offer Accept and Correct as a choice. After the record, ask whether to implement. Do not implement before they choose. There is no exemption.
+description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product \u2014 AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage/turn). Express only when partner says \"you decide\". Hands to design-record at end. Constitution owns Confirmation choice."
+triggers:
+  - "design"
+  - "redesign"
+  - "critique"
+  - "discuss"
+  - "plan"
+  - "change a screen"
+  - "change a flow"
+  - "change a feature"
+  - "change a product"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "IA-only"
+  - "evidence-only"
+  - "direction-only"
+  - "rename"
+  - "word"
+  - "label"
+  - "button text"
+tokenBudget:
+  summary: 60
+  body: 1200
 metadata:
-  updated: "2026-09-27"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

@@ -1,8 +1,30 @@
 ---
 name: information-architecture
 description: Organize where something lives. Covers pages, steps, sections, and navigation labels. Use when the prompt asks to organize, group, place, or name the structure, and does not ask to design the screen. During a design pipeline, apply only in Structure. A structure-only request does not start the design pipeline.
+triggers:
+  - "organize"
+  - "group"
+  - "place"
+  - "name the structure"
+  - "navigation"
+  - "page structure"
+  - "section"
+  - "where does"
+  - "IA"
+  - "information architecture"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "evidence-only"
+  - "direction-only"
+  - "screen design"
+  - "layout"
+  - "component"
+tokenBudget:
+  summary: 45
+  body: 700
 metadata:
-  updated: "2026-09-26"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

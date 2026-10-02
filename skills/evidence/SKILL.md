@@ -1,8 +1,28 @@
 ---
 name: evidence
 description: Ground a design decision in real evidence the partner can provide or confirm. Use when the prompt asks for evidence, user or market research, what we know about users or the market, analytics, retention, traffic, drop-off, competitors, or what similar products do, and when the design pipeline needs grounding before continuing. Prefer plain questions the partner can answer in conversation. Ask for files only after naming what would help and confirming they can produce them. Do not invent users, quotes, counts, or findings. Do not treat the partner as an end user. A request that only asks for evidence does not start the design pipeline. During a design pipeline, apply only when that pipeline opens Evidence.
+triggers:
+  - "evidence"
+  - "research"
+  - "analytics"
+  - "retention"
+  - "traffic"
+  - "drop-off"
+  - "competitors"
+  - "similar products"
+  - "user research"
+  - "market research"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "IA-only"
+  - "direction-only"
+  - "design"
+tokenBudget:
+  summary: 50
+  body: 900
 metadata:
-  updated: "2026-09-26"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

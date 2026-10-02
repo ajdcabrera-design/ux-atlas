@@ -1,8 +1,30 @@
 ---
 name: ux-writing
 description: Write, rewrite, name, or audit interface copy. Covers voice and tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation, and copy review across screens. Use when the prompt asks for interface copy or content, asks for words, asks how the product should sound, or asks for a copy audit. During a design pipeline, apply only in Structure for the action and state names, and in Surface for voice then strings. A copy-only request does not start the design pipeline. Do not invent a playful voice for sport. Do not generate marketing assets, logos, or campaigns.
+triggers:
+  - "copy"
+  - "wording"
+  - "label"
+  - "button text"
+  - "error message"
+  - "empty state"
+  - "voice"
+  - "tone"
+  - "rename button"
+  - "audit copy"
+  - "interface text"
+excludes:
+  - "flow-only"
+  - "IA-only"
+  - "evidence-only"
+  - "direction-only"
+  - "layout"
+  - "design"
+tokenBudget:
+  summary: 45
+  body: 850
 metadata:
-  updated: "2026-09-26"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

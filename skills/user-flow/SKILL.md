@@ -1,8 +1,29 @@
 ---
 name: user-flow
 description: Decide how someone finishes one job. Covers the main success path, branches, empty and error recovery, cancel, and exit. Use when the prompt asks for a flow, path, steps in order, happy path, or what happens when something fails, and does not ask to design the screen. During a design pipeline, apply only in Structure. A flow-only request does not start the design pipeline.
+triggers:
+  - "flow"
+  - "path"
+  - "happy path"
+  - "steps in order"
+  - "what happens when"
+  - "cancel"
+  - "exit"
+  - "error recovery"
+  - "user journey"
+excludes:
+  - "copy-only"
+  - "IA-only"
+  - "evidence-only"
+  - "direction-only"
+  - "screen design"
+  - "layout"
+  - "component"
+tokenBudget:
+  summary: 45
+  body: 750
 metadata:
-  updated: "2026-09-26"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

@@ -1,8 +1,25 @@
 ---
 name: design-record
 description: Keep the project's living design record and the DESIGN_GAPS.md register. Use when another Atlas skill hands back Decided, Assumed, Rejected, Return, Skipped, or system gap lines; at the design pipeline's Record; or when the partner asks for the decision history, the open gaps, or why something was decided. Covers the run log, active decisions, gap keys, gap resolution and pruning, and automated triggers. Do not use for a change that produced no decision, assumption, or gap. Never invent a decision, an actor, or a reason. There is no exemption.
+triggers:
+  - "record"
+  - "decision history"
+  - "open gaps"
+  - "design gaps"
+  - "why decided"
+  - "persist decisions"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "IA-only"
+  - "evidence-only"
+  - "direction-only"
+  - "design"
+tokenBudget:
+  summary: 40
+  body: 1000
 metadata:
-  updated: "2026-10-01"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 
@@ -29,7 +46,7 @@ Write only when the turn produced at least one entry below. A change with none w
 
 Consent follows `record`.
 
-- `on`: write without a choice. The record is not a product change. Say in one line what was written.
+- `on`: write without a choice. The record is not a product change. The constitution's Confirmation does not apply. Say in one line what was written.
 - `ask`: use the constitution's Confirmation choice once per run, after the work. Options: "Write to the design record" and "Leave it in this reply." Accepting covers the rest of this run.
 - `off`: write nothing. Keep the entries in the reply.
 

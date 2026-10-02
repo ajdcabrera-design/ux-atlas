@@ -4,6 +4,18 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 2 October 2026
+
+### Added
+
+- The Design Pipeline (Fast). Experienced partners can opt into a three-stop Express path: Frame, Structure, and Surface. Guided remains the default.
+- The UX Constitution (Core) and UX Constitution (Extended). Interface work gets concise foundational rules, with advanced cases available when needed.
+
+### Changed
+
+- Skill routing now uses explicit triggers, exclusions, and token budgets so focused requests can use a narrower skill without loading unrelated guidance.
+- Project instructions include the core UX thresholds and point to the extended constitution for edge cases.
+
 ## 1 October 2026
 
 ### Added

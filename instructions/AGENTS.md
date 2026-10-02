@@ -8,12 +8,21 @@ A file named exactly `DESIGN.md` at the project root is the project's design sys
 
 ## Always on
 
-For any UI, UX, accessibility, or component work, apply this constitution. It supersedes a narrower skill when they conflict. The full text, including edge cases, is `node_modules/ux-atlas/skills/ux-constitution/SKILL.md`. Read that body when the task needs a threshold, exception, or example this summary does not settle.
+For any UI, UX, accessibility, or component work, apply this constitution. It supersedes a narrower skill when they conflict. The core thresholds are in this file. The core rules are in `node_modules/ux-atlas/skills/ux-constitution-core/SKILL.md`. Read that body when the task needs a threshold, exception, or example this summary does not settle. For edge cases and advanced rules beyond the core, see `node_modules/ux-atlas/skills/ux-constitution-extended/SKILL.md`.
 
-1. **Interaction:** Provide immediate visual feedback (loading, success, error). Prevent errors with constrained inputs. Always provide a non-destructive exit (Cancel or Undo).
-2. **Psychology:** Minimize cognitive load. Break complex forms into steps. Primary actions are at least 44×44px and easy to reach.
-3. **Perception:** Group related elements with spacing and surfaces. Interactive elements must look distinct from static ones.
-4. **Inclusivity:** WCAG 2.1 AA. Semantic HTML. 4.5:1 text contrast. Do not remove `:focus-visible` without an equal replacement. Dynamic updates use `aria-live`.
-5. **Confirmation:** After a skill would execute, implement, or change the interface or the flow, stop and ask before changing the product. Write the work first. Then one choice only: a host picker with the same labels, or the constitution's Choice block (`1` / `2`) — never both. The size does not matter. There is no exemption.
+**Core thresholds (memorize these):**
+- Feedback: spinner after 300ms, skeleton after 1s, loading state on clicked control
+- Targets: ≥44×44px (48×48 Material), primary at thumb/cursor
+- Choices: split flows >10 items, chunk 7±2 items, sticky headers on long lists
+- Space: space > color/borders for grouping; label closer to field than previous field
+- Contrast: 4.5:1 text (3:1 large/UI), color + icon/text, disabled readable not 30% opacity
+- Focus: `:focus-visible` high-contrast outline; Tab/Enter/Space everywhere; `aria-live="polite"` on toasts
+- Scrim: 40–60% behind modals; native HTML before ARIA
+
+1. **Interaction:** Feedback <300ms no spinner; skeleton after 1s; loading state on clicked control. Constrained inputs (mask, picker). Exits: Back/Cancel/Undo; type name for irreversible delete.
+2. **Psychology:** Targets ≥44×44px. Primary action at thumb/cursor. Split flows >10 choices. Chunk 7±2 items. Sticky headers. One primary filled button.
+3. **Perception:** Space > color/borders. Label closer to field. Same look = same behavior. Scrim 40–60% behind modals.
+4. **Inclusivity:** 4.5:1 text (3:1 large/UI). Alt on informative images. Color + icon/text. Disabled readable. Tab/Enter/Space everywhere. `:focus-visible` outline. `aria-live="polite"` on toasts. Native HTML before ARIA.
+5. **Confirmation:** Stop before any **product change**. Write work first. One choice: host picker or Choice block (`1`/`2`), never both. Record writes are not product changes. No exemption.
 
 If a result breaks one of these, it is broken.

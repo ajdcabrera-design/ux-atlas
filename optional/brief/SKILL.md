@@ -1,8 +1,16 @@
 ---
 name: brief
 description: Rewrite the current context into an actionable prompt before any other skill runs. Use on every prompt, including a short reply or a transcript. Keep that prompt internal. Do not show it. Do not end the turn. This skill does not choose which skill runs next.
+triggers:
+  - "brief"
+  - "rewrite prompt"
+  - "restate request"
+excludes: []
+tokenBudget:
+  summary: 30
+  body: 200
 metadata:
-  updated: "2026-09-26"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

@@ -1,8 +1,31 @@
 ---
 name: screen-composition
 description: Compose one screen from the project's design system. Covers regions, what leads, reading and focus order, component mapping, tokens, states per region, and reflow on small viewports. Use when the prompt asks to lay out or compose a screen, choose components, set visual hierarchy, or say how a screen reflows, and the flow and information architecture are settled. During a design pipeline, apply only in Surface, before ux-writing. A composition-only request does not start the design pipeline. Do not invent a visual system, theme, or brand.
+triggers:
+  - "layout"
+  - "compose screen"
+  - "component"
+  - "visual hierarchy"
+  - "reflow"
+  - "responsive"
+  - "design system"
+  - "screen design"
+  - "region"
+  - "landmark"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "IA-only"
+  - "evidence-only"
+  - "direction-only"
+  - "flow"
+  - "path"
+  - "organize"
+tokenBudget:
+  summary: 50
+  body: 950
 metadata:
-  updated: "2026-09-27"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 

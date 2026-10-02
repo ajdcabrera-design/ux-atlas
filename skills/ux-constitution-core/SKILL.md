@@ -1,8 +1,28 @@
 ---
-name: ux-constitution
-description: Foundational UX rules for interaction, psychology, perception, and accessibility. Use for any interface work, and when no narrower skill covers the task. Covers feedback, errors, labels, exits, targets, contrast, focus, and semantic HTML. After a skill would execute, implement, or change the interface or the flow, stop and ask before changing the product. Owns the Choice block every skill uses for an explicit partner stop. Skills hand decisions, assumptions, and system gaps to design-record. There is no exemption.
+name: ux-constitution-core
+description: Foundational UX rules for interaction, psychology, perception, and accessibility — core thresholds only. Use for any interface work. The full constitution with edge cases is in ux-constitution-extended. After a skill would execute, implement, or change the interface or the flow, stop and ask before changing the product. Owns the Choice block every skill uses for an explicit partner stop. Skills hand decisions, assumptions, and system gaps to design-record. There is no exemption.
+triggers:
+  - "interface"
+  - "UI"
+  - "UX"
+  - "accessibility"
+  - "component"
+  - "screen"
+  - "button"
+  - "form"
+  - "modal"
+  - "navigation"
+excludes:
+  - "copy-only"
+  - "flow-only"
+  - "IA-only"
+  - "evidence-only"
+  - "direction-only"
+tokenBudget:
+  summary: 80
+  body: 600
 metadata:
-  updated: "2026-09-27"
+  updated: "2026-10-02"
   updatedBy: Aaron Cabrera
 ---
 
@@ -76,27 +96,27 @@ Help sits next to the task.
 
 ## 2. Psychology
 
-### 2.1 Fitts’s Law
+### 2.1 Fitts's Law
 Time to hit a target depends on distance and size.
 - Primary targets are at least 44×44px (48×48px on Material).
 - Put primary actions where the thumb or cursor already is.
 - Do not place a destructive action against a primary one without space between them.
 - A control on the screen edge is easier to hit. Use that for a critical action.
 
-### 2.2 Hick’s Law
+### 2.2 Hick's Law
 More choices take longer.
 - Split a long flow into steps.
 - Menus with more than 10 items become groups or a searchable combobox.
 - Do not show 10 or more top-level links in one flat list.
 - Expert tools keep controls visible. Hiding them to look simple slows experts.
 
-### 2.3 Jakob’s Law
+### 2.3 Jakob's Law
 People expect this product to work like the ones they already know.
 - Use familiar placements: search is a magnifying glass, destructive actions use a trash metaphor.
 - Do not invent an interaction for a standard task.
 - Depart from a familiar pattern only when the new one is clearly better.
 
-### 2.4 Miller’s Law
+### 2.4 Miller's Law
 Working memory holds about 7 items.
 - Chunk phone numbers and card numbers.
 - Group controls into labeled sections.
@@ -194,6 +214,8 @@ This is the last step before a skill's outcome changes the product. It also owns
 - Guided and express both ask. Deciding the approach is not a confirmation to implement.
 - Do not change the product before they choose. There is no exemption.
 
+**Record writes are not product changes.** The constitution's Confirmation does not apply to design-record writes.
+
 ### The choice
 
 Every skill that needs a partner decision uses this shape. Write the work in the message first. Then present the choice. The message is what the partner reads. The choice is how they answer. The work stays in the message. The choice does not replace it, and the message does not replace the choice.
@@ -221,4 +243,4 @@ A reply of 1, the first option's label, or the picker's first option, accepts. A
 
 ## 6. Design record
 
-When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`. That skill owns the living record and `DESIGN_GAPS.md` lifecycle. Use this constitution's Confirmation choice before writing any record file.
+When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`. That skill owns the living record and `DESIGN_GAPS.md` lifecycle. Use this constitution's Confirmation choice before writing any record file — except when `record: "on"`, where design-record writes without a choice because record writes are not product changes.
