@@ -1,6 +1,6 @@
 ---
 name: design-pipeline
-description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only when partner says \"you decide\". Hands to design-record at end. Constitution owns Confirmation choice."
+description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product \u2014 AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only when partner says \"you decide\". Hands to design-record at end. Constitution owns Confirmation choice."
 triggers:
   - "design"
   - "redesign"
@@ -69,20 +69,6 @@ Ask one question. Ask only what you cannot responsibly assume. State every assum
 Use the constitution's choice rules after the stage text. Accept the stage / Correct this stage. If they correct, say "Stay on this stage. Say what to change."
 
 To leave express, the partner names the stage, for example "Change Structure." Answer "Express ended. Structure is open." Express stays off, and that stage waits. Express cannot be stopped while a response is still being written.
-
-### Visible-work-before-choice (guided phases)
-
-Every guided phase handoff must follow this sequence:
-
-1. **Print the complete phase proposal as conversational text first.** Include the phase name, the full work (problem statement, scope list, flow description, check results, etc.), and all assumptions. This text goes into the chat stream where the partner reads it.
-
-2. **Only then present one decision control.** Use the constitution's choice rules. The decision control (host picker or Choice block) receives only the choice labels — e.g., "Accept Scope / Correct Scope". The picker's message field must be empty or contain only the choice labels. Never put the proposal in the picker message field.
-
-3. **If the host picker cannot display the proposal alongside the choices**, use the constitution's Choice block instead. The proposal is already visible in the chat text above; the Choice block provides the numbered options.
-
-4. **Do not advance** to the next phase until the partner has accepted the proposal they were shown.
-
-This rule applies to every guided stop: Frame, Define, Scope, Structure, Check, and Surface.
 
 ## 1. Frame
 
