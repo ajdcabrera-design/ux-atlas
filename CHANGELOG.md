@@ -4,6 +4,16 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 3 October 2026
+
+### Fixed
+
+- Stage proposals that need partner acceptance appear before their choice control. Atlas uses an inline Choice block for these work-dependent decisions instead of invoking a host picker.
+
+### Changed
+
+- The design pipeline's stage descriptions are reorganized around routing, resuming, and running the stages, replacing a separate "visible work before choice" section with the constitution's own choice rule.
+
 ## 2 October 2026
 
 ### Added
