@@ -14,10 +14,13 @@ Write what a person using Atlas can do now.
 
 - The design pipeline, guided and fast, writes the handoff spec after the design record. The same `record` setting controls both, with no second prompt.
 - New installs get a `.atlas/README.md` that says where handoff specs live.
+- When a run writes both the design record and the handoff, the record choice reads "Write the record and handoff".
 
 ### Fixed
 
 - The AGENTS.md and CLAUDE.md in the project-folder download point at the current constitution skills and include the core thresholds.
+- Requests to hand off a design that mention implementing it now load the handoff skill.
+- Files in the project-folder download open with command-line `unzip` and other tools.
 
 ## 3 October 2026
 

@@ -80,7 +80,7 @@
       "order": 23,
       "description": "Write the handoff spec for an accepted design: flow, layout, components and states, copy, interaction, motion, and tokens, by reference to the design system.",
       "triggers": ["handoff", "hand off", "design spec", "developer handoff", "spec for engineering", "package the design"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "user story", "acceptance criteria", "implement"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "user story", "acceptance criteria"],
       "tokenBudget": { "summary": 45, "body": 1100 }
     },
     "ux-writing": {

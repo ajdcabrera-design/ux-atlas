@@ -57,10 +57,7 @@ This is the **express variant** of the design pipeline. It runs only when the pa
 
 ## After Surface
 
-Hand to `design-record`:
-- If `record: "on"`: write automatically, say what was written
-- If `record: "ask"`: constitution's Choice block once — "Write to design record" / "Leave in reply"
-- If `record: "off"`: keep in reply
+Hand decisions, assumptions, and gaps to `design-record`. It owns the `record` setting and, when the setting is `ask`, the one choice and its labels.
 
 Then hand the accepted work to `design-handoff`. It writes the handoff spec under the same record setting and does not ask again.
 

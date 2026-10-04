@@ -48,7 +48,7 @@ Write only when the turn produced at least one entry below. A change with none w
 Consent follows `record`.
 
 - `on`: write without a choice. The record is not a product change. The constitution's Confirmation does not apply. Say in one line what was written.
-- `ask`: use the constitution's Confirmation choice once per run, after the work. Options: "Write to the design record" and "Leave it in this reply." Accepting covers the rest of this run.
+- `ask`: use the constitution's Confirmation choice once per run, after the work. Options: "Write to the design record" and "Leave it in this reply." When `design-handoff` will also write in this run, the first option is "Write the record and handoff." Accepting covers the rest of this run.
 - `off`: write nothing. Keep the entries in the reply.
 
 The same setting and the same choice cover the handoff spec that `design-handoff` writes. Do not offer a second choice for it.

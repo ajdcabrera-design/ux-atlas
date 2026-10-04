@@ -16,7 +16,6 @@ excludes:
   - "direction-only"
   - "user story"
   - "acceptance criteria"
-  - "implement"
 tokenBudget:
   summary: 45
   body: 1100
