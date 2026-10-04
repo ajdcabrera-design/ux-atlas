@@ -21,11 +21,12 @@ excludes:
   - "flow"
   - "path"
   - "organize"
+  - "handoff-only"
 tokenBudget:
   summary: 50
   body: 950
 metadata:
-  updated: "2026-10-02"
+  updated: "2026-10-04"
   updatedBy: Aaron Cabrera
 ---
 

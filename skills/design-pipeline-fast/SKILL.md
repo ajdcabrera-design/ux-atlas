@@ -13,11 +13,12 @@ excludes:
   - "discuss"
   - "critique"
   - "plan"
+  - "handoff-only"
 tokenBudget:
   summary: 50
   body: 800
 metadata:
-  updated: "2026-10-02"
+  updated: "2026-10-04"
   updatedBy: Aaron Cabrera
 ---
 
@@ -60,6 +61,8 @@ Hand to `design-record`:
 - If `record: "on"`: write automatically, say what was written
 - If `record: "ask"`: constitution's Choice block once — "Write to design record" / "Leave in reply"
 - If `record: "off"`: keep in reply
+
+Then hand the accepted work to `design-handoff`. It writes the handoff spec under the same record setting and does not ask again.
 
 Then constitution's Choice: **Implement the change / Leave the change**
 

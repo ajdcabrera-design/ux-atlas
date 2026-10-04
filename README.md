@@ -32,7 +32,7 @@ The install creates `.atlas/config.json` and `.atlas/README.md`. Set `record` to
 - `on` writes eligible records automatically.
 - `off` keeps the record in the reply and writes no record files.
 
-The record uses `.atlas/runs/` for history, `.atlas/decisions.md` for active decisions, and `DESIGN_GAPS.md` for open gaps. Edit `.atlas/config.json` directly; no CLI override is currently provided.
+The record uses `.atlas/runs/` for history, `.atlas/decisions.md` for active decisions, and `DESIGN_GAPS.md` for open gaps. Handoff specs for engineering go in `.atlas/handoff/`, one timestamped file per run, under the same `record` setting. Edit `.atlas/config.json` directly; no CLI override is currently provided.
 
 ## Fork or clone (contribute)
 

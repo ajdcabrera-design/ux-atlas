@@ -45,6 +45,8 @@ export const recordGuide = [
   '',
   'The record lives in `.atlas/runs/`, with active decisions in `.atlas/decisions.md` and open gaps in `DESIGN_GAPS.md`.',
   '',
+  'Handoff specs live in `.atlas/handoff/`, one timestamped file per run. The latest file for a job is the current one. The same `record` setting controls when they are written.',
+  '',
 ].join('\n');
 
 function packageRoot() {

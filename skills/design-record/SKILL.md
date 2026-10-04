@@ -15,11 +15,12 @@ excludes:
   - "evidence-only"
   - "direction-only"
   - "design"
+  - "handoff-only"
 tokenBudget:
   summary: 40
   body: 1000
 metadata:
-  updated: "2026-10-02"
+  updated: "2026-10-04"
   updatedBy: Aaron Cabrera
 ---
 
@@ -49,6 +50,8 @@ Consent follows `record`.
 - `on`: write without a choice. The record is not a product change. The constitution's Confirmation does not apply. Say in one line what was written.
 - `ask`: use the constitution's Confirmation choice once per run, after the work. Options: "Write to the design record" and "Leave it in this reply." Accepting covers the rest of this run.
 - `off`: write nothing. Keep the entries in the reply.
+
+The same setting and the same choice cover the handoff spec that `design-handoff` writes. Do not offer a second choice for it.
 
 During the design pipeline, hold entries until the pipeline's Record. Do not offer a second choice in that turn.
 

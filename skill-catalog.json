@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-02",
+  "version": "2026-10-04",
   "skills": {
     "intake": {
       "title": "Intake",
@@ -53,7 +53,7 @@
       "order": 20,
       "description": "Turn a design request into a sequence of decisions. Guided default (6 stops). Express only when partner says 'you decide'.",
       "triggers": ["design", "redesign", "critique", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only"],
       "tokenBudget": { "summary": 60, "body": 1200 }
     },
     "design-pipeline-fast": {
@@ -62,7 +62,7 @@
       "order": 21,
       "description": "Express-only design pipeline for experienced partners. Three stops: Frame → Structure → Surface. Opt-in only.",
       "triggers": ["fast track", "express", "you decide", "skip to structure", "pipeline fast"],
-      "excludes": ["guided", "step by step", "discuss", "critique", "plan"],
+      "excludes": ["guided", "step by step", "discuss", "critique", "plan", "handoff-only"],
       "tokenBudget": { "summary": 50, "body": 800 }
     },
     "design-record": {
@@ -71,8 +71,17 @@
       "order": 22,
       "description": "Keep the project's living design record and the DESIGN_GAPS.md register.",
       "triggers": ["record", "decision history", "open gaps", "design gaps", "why decided", "persist decisions"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "design"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "design", "handoff-only"],
       "tokenBudget": { "summary": 40, "body": 1000 }
+    },
+    "design-handoff": {
+      "title": "Design handoff",
+      "section": "design-ops",
+      "order": 23,
+      "description": "Write the handoff spec for an accepted design: flow, layout, components and states, copy, interaction, motion, and tokens, by reference to the design system.",
+      "triggers": ["handoff", "hand off", "design spec", "developer handoff", "spec for engineering", "package the design"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "user story", "acceptance criteria", "implement"],
+      "tokenBudget": { "summary": 45, "body": 1100 }
     },
     "ux-writing": {
       "title": "UX Writing",
@@ -107,7 +116,7 @@
       "order": 28,
       "description": "Compose one screen from the project's design system. Covers regions, what leads, reading and focus order, component mapping, tokens, states per region, and reflow.",
       "triggers": ["layout", "compose screen", "component", "visual hierarchy", "reflow", "responsive", "design system", "screen design", "region", "landmark"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "flow", "path", "organize"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "flow", "path", "organize", "handoff-only"],
       "tokenBudget": { "summary": 50, "body": 950 }
     }
   }

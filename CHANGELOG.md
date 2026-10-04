@@ -4,6 +4,21 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 4 October 2026
+
+### Added
+
+- Design handoff. After a design is accepted, Atlas can write a handoff spec for engineering in `.atlas/handoff/`, one timestamped file per run. It covers flow, layout, components and states, copy, interaction, motion, and tokens by reference to the design system, and marks anything not decided as Open.
+
+### Changed
+
+- The design pipeline, guided and fast, writes the handoff spec after the design record. The same `record` setting controls both, with no second prompt.
+- New installs get a `.atlas/README.md` that says where handoff specs live.
+
+### Fixed
+
+- The AGENTS.md and CLAUDE.md in the project-folder download point at the current constitution skills and include the core thresholds.
+
 ## 3 October 2026
 
 ### Fixed
