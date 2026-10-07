@@ -3,15 +3,15 @@ Before choosing a skill, restate the request to yourself. Hold what needs to cha
 Each skill is `node_modules/ux-atlas/skills/<name>/SKILL.md`. This index is the disclosure layer. The body is the rule set.
 
 <!-- skill-index -->
-- `ux-constitution`: Foundational UX rules for interaction, psychology, perception, and accessibility, with their thresholds and exceptions.
-- `evidence`: Ground a design decision in real evidence the partner can provide or confirm.
-- `product-direction`: Set the overall design direction for an open-ended product ask. Offer two or three candidate directions, recommend one, and let the partner choose.
-- `design-pipeline`: Turn a design request into a sequence of decisions. Guided default (6 stops). Express only on explicit opt-in, such as 'express', 'fast track', or 'you decide'.
-- `design-record`: Keep the project's living design record and the DESIGN_GAPS.md register.
-- `design-handoff`: Write the handoff spec for an accepted design: flow, layout, components and states, copy, interaction, motion, and tokens, by reference to the design system.
-- `structure`: Decide how someone finishes one job and where things live. Covers the path (success, branches, recovery, cancel, exit) and the map (pages, steps, sections, navigation labels).
-- `screen-composition`: Compose one screen from the project's design system. Covers regions, what leads, reading and focus order, component mapping, tokens, states per region, and reflow.
-- `ux-writing`: Write, rewrite, name, or audit interface copy. Covers voice, tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation.
+- `ux-constitution`: Interface rules for interaction, psychology, perception, and accessibility. Read when interface work needs a threshold, exception, or example the summary below does not settle.
+- `evidence`: Ground a decision in evidence the partner can give or confirm. Use when asked what we know about users, the market, analytics, drop-off, or competitors. An evidence-only ask does not start the pipeline.
+- `product-direction`: Offer two or three directions for an open-ended ask and let the partner choose. Use when kind, audience, or goal is unsettled, such as 'design me an app' or 'how can I improve this' with no goal.
+- `design-pipeline`: Run a design request as staged decisions. Use when the ask needs more than one discipline or changes what to build. Guided by default. Express only on 'express', 'fast track', or 'you decide'.
+- `design-record`: Keep the decision record and DESIGN_GAPS.md. Use at the pipeline's Record, or when the partner asks for the record, the decision history, or the open gaps.
+- `design-handoff`: Write the handoff spec for an accepted design, by reference to the design system. Use at the pipeline's Record, or when asked to hand off or spec accepted work.
+- `structure`: Decide the path through one job and where things live. Use for a flow, a happy path, or what happens on failure, or to organize, place, or name pages and navigation. Not for screen design.
+- `screen-composition`: Compose one screen from the design system: regions, order, components, tokens, states, reflow. Use for layout, hierarchy, or component choice once the flow is settled.
+- `ux-writing`: Write, rewrite, name, or audit interface copy, and set voice and tone. Use for any wording, label, message, or copy review.
 <!-- /skill-index -->
 
 Route from this index. Do not open a skill file to decide whether it applies. When a line matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”
@@ -56,6 +56,6 @@ Before a product change, when no skill names the options, they are Implement the
 
 `1`, the first label, or the picker's first option accepts. `2`, the second label, or the picker's second option declines or corrects. Any other answer is typed: continue the current work and do not treat it as acceptance. Act on a picker answer in the same response.
 
-When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`.
+The design pipeline hands its decisions to `design-record` at Record. Outside the pipeline, use `design-record` only when the partner asks for the record, or when a skill's body says to hand something to it.
 
 If a result breaks one of these, it is broken.
