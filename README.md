@@ -8,15 +8,14 @@ Install into a project:
 
 ```bash
 npm install github:ajdcabrera-design/ux-atlas
+npx ux-atlas init
 ```
 
-The install writes a pointer at the end of the project's `AGENTS.md` and `CLAUDE.md`. Those files then point at the skills in `node_modules`. Run `npm update ux-atlas` for a newer copy. If install scripts are disabled, run `npx ux-atlas init`.
+The second command writes a pointer at the end of the project's `AGENTS.md` and `CLAUDE.md`. Those files then point at the skills in `node_modules`. npm 12 and later do not run a package's install script unless the project approves it, so the pointer is not added during the install. Running the command again changes nothing. Run `npm update ux-atlas` for a newer copy.
 
 Or download a project folder from [atlas.aarondesign.rocks](https://atlas.aarondesign.rocks/download).
 
 A `DESIGN.md` at the project root stays the project's file. The package update does not replace it.
-
-The intake skill ships in the package and runs first on every request. There is nothing to opt into.
 
 ## Record settings
 

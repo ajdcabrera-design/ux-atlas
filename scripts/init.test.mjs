@@ -78,7 +78,7 @@ test('leaves a user skills/brief folder in place', () => {
   assert.equal(fs.readFileSync(skill, 'utf8'), 'mine\n');
 });
 
-test('the brief command says intake is included and writes nothing', () => {
+test('the brief command says there is nothing to add and writes nothing', () => {
   const root = tempProject();
   const output = execFileSync(process.execPath, [path.resolve(import.meta.dirname, 'init.mjs'), 'brief'], {
     cwd: root,
@@ -90,12 +90,12 @@ test('the brief command says intake is included and writes nothing', () => {
   assert.equal(fs.existsSync(path.join(root, 'skills')), false);
 });
 
-test('ships the intake skill and points instructions at it', () => {
+test('ships no skill that runs before selection', () => {
   const pkg = path.resolve(import.meta.dirname, '..');
-  assert.equal(fs.existsSync(path.join(pkg, 'skills', 'intake', 'SKILL.md')), true);
+  assert.equal(fs.existsSync(path.join(pkg, 'skills', 'intake')), false);
   assert.equal(fs.existsSync(path.join(pkg, 'optional', 'brief')), false);
   const instructions = fs.readFileSync(path.join(pkg, 'instructions', 'AGENTS.md'), 'utf8');
-  assert.match(instructions.split('\n')[0], /skills\/intake\/SKILL\.md/);
+  assert.match(instructions.split('\n')[0], /^Before choosing a skill, restate the request/);
 });
 
 test('leaves a shared AGENTS.md and CLAUDE.md file as one pointer', () => {

@@ -1,6 +1,6 @@
 ---
 name: design-pipeline
-description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only when partner says \"you decide\". Hands to design-record at end. Constitution owns Confirmation choice."
+description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only on explicit opt-in (\"express\", \"fast track\", \"you decide\"). Hands to design-record at end. Constitution owns Confirmation choice."
 triggers:
   - "design"
   - "redesign"
@@ -11,6 +11,8 @@ triggers:
   - "change a flow"
   - "change a feature"
   - "change a product"
+  - "express"
+  - "fast track"
 excludes:
   - "copy-only"
   - "flow-only"
@@ -26,7 +28,7 @@ tokenBudget:
   summary: 60
   body: 1200
 metadata:
-  updated: "2026-10-04"
+  updated: "2026-10-07"
   updatedBy: Aaron Cabrera
 ---
 
@@ -44,7 +46,7 @@ Guided is the default: Frame, Define, Scope, Structure, Check, Surface. Present 
 
 On Accept, begin the next open stage in the next response. On Correct, revise and stay. Reopening an earlier stage makes later decisions open again. A direction chosen in-pipeline counts as Frame; continue at Define. A direction-only request ends after that choice.
 
-Express requires explicit opt-in (for example, "you decide"). Mark unresolved partner-specific details as assumptions. Present each remaining stage as a distinct block in one response, with no guided waits. End after Record, then ask separately about implementation. If the partner names a stage, return to it in Guided.
+Express requires explicit opt-in: "express", "fast track", "you decide", or the same in other words. Mark unresolved partner-specific details as assumptions. Present each remaining stage as a distinct block in one response, with no guided waits. End after Record, then ask separately about implementation. If the partner names a stage or asks for guided, say "Express ended. <Stage> is open." and return to it in Guided.
 
 Ask only questions the partner must answer and keep assumptions visible. Propose optional Evidence, Another structure, or Test only under these rules; never run them silently.
 
@@ -64,7 +66,7 @@ List In, Out, and Later. Every In item serves Define; preserve partner constrain
 
 ### 4. Structure
 
-Describe one job's entry, path, primary action, empty/error recovery, cancel/exit, and relevant alternate path. Apply user-flow and information-architecture; name a rejected alternative and why. No visual styling or component anatomy. Surface waits for acceptance.
+Describe one job's entry, path, primary action, empty/error recovery, cancel/exit, and relevant alternate path. Apply the `structure` skill; name a rejected alternative and why. No visual styling or component anatomy. Surface waits for acceptance.
 
 ### 5. Check
 

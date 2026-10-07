@@ -87,9 +87,9 @@ The token names this spec uses, grouped by kind.
 Each Open and Assumed line from above, in one list. Gaps by their key in DESIGN_GAPS.md.
 ```
 
-Copy the flow, the places, the composition, and the strings from what `user-flow`, `information-architecture`, `screen-composition`, and `ux-writing` handed back. Keep their wording.
+Copy the flow, the places, the composition, and the strings from what `structure`, `screen-composition`, and `ux-writing` handed back. Keep their wording.
 
-Interaction and Motion hold only what the accepted work states. Behavior the spec does not list follows `ux-constitution-core`. Say that once, under Interaction. Do not copy its rules.
+Interaction and Motion hold only what the accepted work states. Behavior the spec does not list follows `ux-constitution`. Say that once, under Interaction. Do not copy its rules.
 
 ## Rules
 

@@ -1,17 +1,15 @@
 ---
-name: ux-constitution-core
-description: Foundational UX rules for interaction, psychology, perception, and accessibility — core thresholds only. Use for any interface work. The full constitution with edge cases is in ux-constitution-extended. After a skill would execute, implement, or change the interface or the flow, stop and ask before changing the product. Owns the Choice block every skill uses for an explicit partner stop. Skills hand decisions, assumptions, and system gaps to design-record. There is no exemption.
+name: ux-constitution
+description: Foundational UX rules for interaction, psychology, perception, and accessibility, with their thresholds and exceptions. Use for any interface work. Confirmation and the Choice block are in the always-on instructions, not in this body.
 triggers:
   - "interface"
   - "UI"
   - "UX"
   - "accessibility"
-  - "component"
   - "screen"
   - "button"
   - "form"
   - "modal"
-  - "navigation"
 excludes:
   - "copy-only"
   - "flow-only"
@@ -19,10 +17,10 @@ excludes:
   - "evidence-only"
   - "direction-only"
 tokenBudget:
-  summary: 80
-  body: 600
+  summary: 45
+  body: 2300
 metadata:
-  updated: "2026-10-03"
+  updated: "2026-10-07"
   updatedBy: Aaron Cabrera
 ---
 
@@ -36,12 +34,17 @@ Keep the user informed. They should never wonder whether a click registered.
 - Put the clicked control into a loading state until the action finishes.
 - Do not freeze the UI or rely on a silent request.
 - If the response is under 300ms, delay the spinner so it does not flash.
+- A multi-step operation shows progress for each step, not one global spinner.
+- For a reversible action, show success at once and roll back if it fails.
+- If data may be stale, show a refresh indicator. Do not block interaction.
 
 ### 1.2 Language
 Use the user's words, not the system's.
 - Button labels are specific verbs: "Delete project", not "Submit".
 - Do not show stack traces, schema names, or raw error codes.
 - Replace "Ascending" and "Descending" with "Price: low to high" or "Date: newest first".
+- For a developer audience, schema names and error codes may be the user's words.
+- Required legal phrasing overrides a verb-only label.
 
 ### 1.3 Exits
 Every unwanted state needs a visible way out.
@@ -49,6 +52,8 @@ Every unwanted state needs a visible way out.
 - Use an Undo toast for low-stakes destructive actions.
 - Do not trap the user or make the browser Back button the only exit.
 - For irreversible destruction, require typing the object name. Prefer a 30-day soft delete over an immediate purge.
+- A batch action takes one confirmation, not one per item. Show the count and a sample of what is affected.
+- A timed soft delete takes one confirmation, not two.
 
 ### 1.4 Prevention
 Stop the error before it happens.
@@ -109,6 +114,7 @@ More choices take longer.
 - Menus with more than 10 items become groups or a searchable combobox.
 - Do not show 10 or more top-level links in one flat list.
 - Expert tools keep controls visible. Hiding them to look simple slows experts.
+- An expert-mode toggle that shows every control is valid when the default hides complexity.
 
 ### 2.3 Jakob's Law
 People expect this product to work like the ones they already know.
@@ -167,6 +173,7 @@ People separate the focused layer from the resting layer.
 - Put a 40–60% black scrim behind a modal or drawer.
 - Text must stay high contrast against its surface.
 - Do not lay text on a photo without a scrim, gradient, or solid backing.
+- A modal opened over a modal gets its own scrim. The lower one stays visible and inactive.
 
 ### 3.5 Continuity
 The eye follows an aligned edge.
@@ -193,58 +200,19 @@ People complete simple shapes. Extra chrome is noise.
 - `:focus-visible` is a high-contrast offset outline. Do not remove it without an equal replacement.
 - A modal traps focus in a cycle and Escape closes it.
 - A menu that opens on hover also opens on click and on keyboard focus.
+- Drag and drop has a keyboard alternative: Space to pick up, arrows to move, Space to drop.
+- In a data table, arrow keys move between cells. Home and End jump to the ends of the row, and with Ctrl to the corners of the table.
+- A carousel or autoplay pauses on hover and on focus, and has previous and next controls.
 
 ### 4.3 Understandable
 - A control does what it appears to do. A switch does not submit a form or navigate.
 - Navigation stays in the same place on every page.
 - Do not hijack scrolling.
 - Toasts and other live updates use `aria-live="polite"`.
+- Use `aria-live="assertive"` only for a critical alert, such as data loss or a security warning.
 
 ### 4.4 Robust
 - Use `button`, `nav`, `main`, and `aside` before ARIA.
 - A custom control exposes name, role, and value when no native element fits.
 - Do not put a click handler on a `div` or `span` and call it a button.
 - Do not add ARIA that repeats what native HTML already says.
-
-## 5. Confirmation
-
-This is the last step before a skill's outcome changes the product. It also owns every stop that needs the partner to choose before the skill continues. It applies to every skill that would execute, implement, change the interface or the flow, or wait on an explicit partner decision.
-- Stop and ask the partner to confirm before changing the product.
-- Ask for a small change and for a large one.
-- Guided and express both ask. Deciding the approach is not a confirmation to implement.
-- Do not change the product before they choose. There is no exemption.
-
-**Record writes are not product changes.** The constitution's Confirmation does not apply to design-record writes.
-
-### The choice
-
-Every skill that needs a partner decision uses this shape. Write the work in the message first. Then present the choice. The message is what the partner reads. The choice is how they answer. The work stays in the message. The choice does not replace it, and the message does not replace the choice.
-
-Do not present the choice before the work is written. Do not send the choice in a turn that has no work text. Do not end the turn with the work and free text alone.
-
-Use the option labels the calling skill defines. Keep those labels the same on every host. Present the choice in exactly one of these ways. Never both in the same turn.
-
-**When the choice depends on work written in this response** (a design-pipeline stage proposal, a critique, or any other work the partner must read before deciding), show that work followed by the Choice block below. Do not invoke a host picker for that decision.
-
-**Host picker.** Use a host picker only for a choice that does not depend on work written in the current response. Use the calling skill's labels. **The picker's message field must be empty or contain only the choice labels.** Do not put proposals or assumptions in its message field. Do not also print a Choice block or ask for a typed reply. One decision, one control.
-
-**Choice block.** Use this for every work-dependent choice and whenever a host picker is missing or fails. Do not invent a third pattern or replace this with free-form "please confirm" wording.
-
-```
-Choice
-1. <first option>
-2. <second option>
-Reply with 1 or 2. If the second option needs detail, say what to change.
-```
-
-Before changing the product, when no narrower skill names the options, use these.
-- Implement the change
-- Leave the change
-
-A reply of 1, the first option's label, or the picker's first option, accepts. A reply of 2, the second option's label, or the picker's second option, declines or corrects. Any other answer is typed. Treat it as continuing the current work, not as acceptance.
-
-A picker answer is the partner's reply. Act on it in the same response. Do not end on an acknowledgement.
-
-## 6. Design record
-
-When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`. That skill owns the living record and `DESIGN_GAPS.md` lifecycle. Use this constitution's Confirmation choice before writing any record file — except when `record: "on"`, where design-record writes without a choice because record writes are not product changes.

@@ -1,33 +1,14 @@
 {
   "version": "2026-10-04",
   "skills": {
-    "intake": {
-      "title": "Intake",
-      "section": "foundations",
-      "order": 5,
-      "description": "Always on. Runs first on every request and rewrites it into an internal prompt that skill selection reads. Not selected by description match.",
-      "triggers": [],
-      "excludes": [],
-      "alwaysOn": true,
-      "tokenBudget": { "summary": 30, "body": 220 }
-    },
-    "ux-constitution-core": {
-      "title": "The UX Constitution (Core)",
+    "ux-constitution": {
+      "title": "The UX Constitution",
       "section": "foundations",
       "order": 10,
-      "description": "Foundational UX rules for interaction, psychology, perception, and accessibility — core thresholds only.",
-      "triggers": ["interface", "UI", "UX", "accessibility", "component", "screen", "button", "form", "modal", "navigation"],
+      "description": "Foundational UX rules for interaction, psychology, perception, and accessibility, with their thresholds and exceptions.",
+      "triggers": ["interface", "UI", "UX", "accessibility", "screen", "button", "form", "modal"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only"],
-      "tokenBudget": { "summary": 80, "body": 600 }
-    },
-    "ux-constitution-extended": {
-      "title": "The UX Constitution (Extended)",
-      "section": "foundations",
-      "order": 11,
-      "description": "Extended UX constitution with edge cases, detailed examples, and advanced rules.",
-      "triggers": ["constitution edge case", "constitution exception", "constitution example", "detailed accessibility", "advanced interaction"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only"],
-      "tokenBudget": { "summary": 40, "body": 1800 }
+      "tokenBudget": { "summary": 45, "body": 2300 }
     },
     "evidence": {
       "title": "Evidence",
@@ -40,7 +21,7 @@
     },
     "product-direction": {
       "title": "Product direction",
-      "section": "design-ops",
+      "section": "process",
       "order": 18,
       "description": "Set the overall design direction for an open-ended product ask. Offer two or three candidate directions, recommend one, and let the partner choose.",
       "triggers": ["product direction", "what kind of product", "best approach", "design me an app", "how can I improve", "open-ended product"],
@@ -49,25 +30,16 @@
     },
     "design-pipeline": {
       "title": "The Design Pipeline",
-      "section": "design-ops",
+      "section": "process",
       "order": 20,
-      "description": "Turn a design request into a sequence of decisions. Guided default (6 stops). Express only when partner says 'you decide'.",
-      "triggers": ["design", "redesign", "critique", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product"],
+      "description": "Turn a design request into a sequence of decisions. Guided default (6 stops). Express only on explicit opt-in, such as 'express', 'fast track', or 'you decide'.",
+      "triggers": ["design", "redesign", "critique", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product", "express", "fast track"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only"],
       "tokenBudget": { "summary": 60, "body": 1200 }
     },
-    "design-pipeline-fast": {
-      "title": "The Design Pipeline (Fast)",
-      "section": "design-ops",
-      "order": 21,
-      "description": "Express-only design pipeline for experienced partners. Three stops: Frame → Structure → Surface. Opt-in only.",
-      "triggers": ["fast track", "express", "you decide", "skip to structure", "pipeline fast"],
-      "excludes": ["guided", "step by step", "discuss", "critique", "plan", "handoff-only"],
-      "tokenBudget": { "summary": 50, "body": 800 }
-    },
     "design-record": {
       "title": "Design record",
-      "section": "design-ops",
+      "section": "process",
       "order": 22,
       "description": "Keep the project's living design record and the DESIGN_GAPS.md register.",
       "triggers": ["record", "decision history", "open gaps", "design gaps", "why decided", "persist decisions"],
@@ -76,7 +48,7 @@
     },
     "design-handoff": {
       "title": "Design handoff",
-      "section": "design-ops",
+      "section": "process",
       "order": 23,
       "description": "Write the handoff spec for an accepted design: flow, layout, components and states, copy, interaction, motion, and tokens, by reference to the design system.",
       "triggers": ["handoff", "hand off", "design spec", "developer handoff", "spec for engineering", "package the design"],
@@ -85,34 +57,25 @@
     },
     "ux-writing": {
       "title": "UX Writing",
-      "section": "content",
+      "section": "disciplines",
       "order": 30,
       "description": "Write, rewrite, name, or audit interface copy. Covers voice, tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation.",
       "triggers": ["copy", "wording", "label", "button text", "error message", "empty state", "voice", "tone", "rename button", "audit copy", "interface text"],
       "excludes": ["flow-only", "IA-only", "evidence-only", "direction-only", "layout", "design"],
       "tokenBudget": { "summary": 45, "body": 850 }
     },
-    "user-flow": {
-      "title": "User flow",
-      "section": "structure",
+    "structure": {
+      "title": "Structure",
+      "section": "disciplines",
       "order": 24,
-      "description": "Decide how someone finishes one job. Covers the main success path, branches, empty and error recovery, cancel, and exit.",
-      "triggers": ["flow", "path", "happy path", "steps in order", "what happens when", "cancel", "exit", "error recovery", "user journey"],
-      "excludes": ["copy-only", "IA-only", "evidence-only", "direction-only", "screen design", "layout", "component"],
-      "tokenBudget": { "summary": 45, "body": 750 }
-    },
-    "information-architecture": {
-      "title": "Information architecture",
-      "section": "structure",
-      "order": 25,
-      "description": "Organize where something lives. Covers pages, steps, sections, and navigation labels.",
-      "triggers": ["organize", "group", "place", "name the structure", "navigation", "page structure", "section", "where does", "IA", "information architecture"],
-      "excludes": ["copy-only", "flow-only", "evidence-only", "direction-only", "screen design", "layout", "component"],
-      "tokenBudget": { "summary": 45, "body": 700 }
+      "description": "Decide how someone finishes one job and where things live. Covers the path (success, branches, recovery, cancel, exit) and the map (pages, steps, sections, navigation labels).",
+      "triggers": ["flow", "path", "happy path", "steps in order", "what happens when", "cancel", "exit", "error recovery", "user journey", "organize", "group", "place", "name the structure", "navigation", "page structure", "section", "where does", "IA", "information architecture"],
+      "excludes": ["copy-only", "evidence-only", "direction-only", "screen design", "layout", "component"],
+      "tokenBudget": { "summary": 60, "body": 1250 }
     },
     "screen-composition": {
       "title": "Screen composition",
-      "section": "surface",
+      "section": "disciplines",
       "order": 28,
       "description": "Compose one screen from the project's design system. Covers regions, what leads, reading and focus order, component mapping, tokens, states per region, and reflow.",
       "triggers": ["layout", "compose screen", "component", "visual hierarchy", "reflow", "responsive", "design system", "screen design", "region", "landmark"],

@@ -1,8 +1,20 @@
-On every request, with no exemption, run `node_modules/ux-atlas/skills/intake/SKILL.md` before any other skill. Read it once; when its body is already in context, apply it without reading the file again. Match skill descriptions against its prompt, not the raw message.
+Before choosing a skill, restate the request to yourself. Hold what needs to change, what this conversation already settled, what the request leaves out, and any open points. A short reply keeps the proposal it accepted. If two readings would change different things, keep both as an open point and do not stop to ask. Keep the size of the ask: a copy change stays a copy change. Do not show the restatement, ask the partner to accept it, or end the turn on it. Match the skill index against the restated request, not the raw message.
 
-Skills live in `node_modules/ux-atlas/skills/**/SKILL.md`. Each file's `name` and `description` are the disclosure layer. The body is the rule set.
+Each skill is `node_modules/ux-atlas/skills/<name>/SKILL.md`. This index is the disclosure layer. The body is the rule set.
 
-Read only the name and description. When a description matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”
+<!-- skill-index -->
+- `ux-constitution`: Foundational UX rules for interaction, psychology, perception, and accessibility, with their thresholds and exceptions.
+- `evidence`: Ground a design decision in real evidence the partner can provide or confirm.
+- `product-direction`: Set the overall design direction for an open-ended product ask. Offer two or three candidate directions, recommend one, and let the partner choose.
+- `design-pipeline`: Turn a design request into a sequence of decisions. Guided default (6 stops). Express only on explicit opt-in, such as 'express', 'fast track', or 'you decide'.
+- `design-record`: Keep the project's living design record and the DESIGN_GAPS.md register.
+- `design-handoff`: Write the handoff spec for an accepted design: flow, layout, components and states, copy, interaction, motion, and tokens, by reference to the design system.
+- `structure`: Decide how someone finishes one job and where things live. Covers the path (success, branches, recovery, cancel, exit) and the map (pages, steps, sections, navigation labels).
+- `screen-composition`: Compose one screen from the project's design system. Covers regions, what leads, reading and focus order, component mapping, tokens, states per region, and reflow.
+- `ux-writing`: Write, rewrite, name, or audit interface copy. Covers voice, tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation.
+<!-- /skill-index -->
+
+Route from this index. Do not open a skill file to decide whether it applies. When a line matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”
 
 Keep the path small. When one narrower skill covers the whole ask, use it alone. Start the design pipeline only when the ask needs more than one of them, or changes what to build.
 
@@ -10,7 +22,7 @@ A file named exactly `DESIGN.md` at the project root is the project's design sys
 
 ## Always on
 
-For any UI, UX, accessibility, or component work, apply this constitution. It supersedes a narrower skill when they conflict. The core thresholds are in this file. The core rules are in `node_modules/ux-atlas/skills/ux-constitution-core/SKILL.md`. Read that body when the task needs a threshold, exception, or example this summary does not settle. For edge cases and advanced rules beyond the core, see `node_modules/ux-atlas/skills/ux-constitution-extended/SKILL.md`.
+For any UI, UX, accessibility, or component work, apply this constitution. It supersedes a narrower skill when they conflict. The core thresholds are in this file. The full rules are in `node_modules/ux-atlas/skills/ux-constitution/SKILL.md`. Read that body when the task needs a threshold, exception, or example this summary does not settle.
 
 **Core thresholds (memorize these):**
 - Feedback: spinner after 300ms, skeleton after 1s, loading state on clicked control
@@ -25,6 +37,25 @@ For any UI, UX, accessibility, or component work, apply this constitution. It su
 2. **Psychology:** Targets ≥44×44px. Primary action at thumb/cursor. Split flows >10 choices. Chunk 7±2 items. Sticky headers. One primary filled button.
 3. **Perception:** Space > color/borders. Label closer to field. Same look = same behavior. Scrim 40–60% behind modals.
 4. **Inclusivity:** 4.5:1 text (3:1 large/UI). Alt on informative images. Color + icon/text. Disabled readable. Tab/Enter/Space everywhere. `:focus-visible` outline. `aria-live="polite"` on toasts. Native HTML before ARIA.
-5. **Confirmation:** Stop before any **product change**. Write work first. One choice: host picker or Choice block (`1`/`2`), never both. Record writes are not product changes. No exemption.
+5. **Confirmation:** Before a skill's outcome would execute, implement, or change the interface or the flow, stop and ask. Ask for a small change and for a large one, in guided and in express. Choosing an approach is not approval to implement. Record writes are not product changes. There is no exemption.
+
+**The choice.** Every stop that needs the partner to decide uses this shape. Write the work in the message first. Then present one choice, with the labels the calling skill defines. Do not present a choice without the work. Do not end on the work and free text alone.
+
+- When the choice depends on work written in this response, use the Choice block. Do not invoke a host picker.
+- Otherwise use a host picker with the same labels and nothing else in its message. If there is no picker, or it fails, use the Choice block.
+- One decision, one control. Never both in the same turn.
+
+```
+Choice
+1. <first option>
+2. <second option>
+Reply with 1 or 2. If the second option needs detail, say what to change.
+```
+
+Before a product change, when no skill names the options, they are Implement the change and Leave the change.
+
+`1`, the first label, or the picker's first option accepts. `2`, the second label, or the picker's second option declines or corrects. Any other answer is typed: continue the current work and do not treat it as acceptance. Act on a picker answer in the same response.
+
+When a skill produces a decision, assumption, return, skipped step, or system gap, hand it to `design-record`.
 
 If a result breaks one of these, it is broken.

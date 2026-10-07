@@ -18,7 +18,8 @@
   "scripts": {
     "lint": "eslint .",
     "postinstall": "node scripts/init.mjs",
-    "test": "node --test scripts/init.test.mjs"
+    "index": "node scripts/skill-index.mjs",
+    "test": "node --test scripts/*.test.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -18,11 +18,11 @@ export const claudeBlock = `${START}
 ${END}
 `;
 
-// Written by `npx ux-atlas brief` before intake shipped in the package.
+// Written by `npx ux-atlas brief`, a command that no longer adds anything.
 export const legacyBriefLine =
   'On every request, with no exemption, read `skills/brief/SKILL.md` and follow it before any other skill. It does not choose the next skill.';
 
-export const briefRemovedMessage = 'Intake is now part of the package. Nothing to add.';
+export const briefRemovedMessage = 'The brief skill is no longer needed. Nothing to add.';
 
 export const recordConfig = '{\n  "record": "ask"\n}\n';
 
