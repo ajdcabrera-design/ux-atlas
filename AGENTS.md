@@ -1,4 +1,4 @@
-Skills live in `skills/**/SKILL.md` when this repository is the project root. After `npm install github:ajdcabrera-design/ux-atlas`, they live in `node_modules/ux-atlas/skills/**/SKILL.md`. Each file's `name` and `description` are the disclosure layer. The body is the rule set.
+Skills live in `skills/**/SKILL.md` when this repository is the project root. After `npm install ux-atlas`, they live in `node_modules/ux-atlas/skills/**/SKILL.md`. Each file's `name` and `description` are the disclosure layer. The body is the rule set.
 
 Read only the name and description. When a description matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”
 

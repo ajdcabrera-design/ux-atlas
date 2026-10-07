@@ -1,16 +1,21 @@
 {
   "name": "ux-atlas",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "UX skills for agents. Each skill is skills/<name>/SKILL.md.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajdcabrera-design/ux-atlas.git"
+  },
   "files": [
     "skills",
     "instructions",
-    "scripts"
+    "scripts/init.mjs"
   ],
   "bin": {
-    "ux-atlas": "./scripts/init.mjs"
+    "ux-atlas": "scripts/init.mjs"
   },
   "exports": {
     "./skills/*": "./skills/*"

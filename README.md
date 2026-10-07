@@ -7,7 +7,7 @@ UX skills for agents. Machine-readable rules in `skills/<name>/SKILL.md`.
 Install into a project:
 
 ```bash
-npm install github:ajdcabrera-design/ux-atlas
+npm install ux-atlas
 npx ux-atlas init
 ```
 

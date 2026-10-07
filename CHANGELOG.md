@@ -17,7 +17,7 @@ Write what a person using Atlas can do now.
 
 ### Fixed
 
-- The install steps now include `npx ux-atlas init`. npm 12 and later do not add the pointer to AGENTS.md and CLAUDE.md during the install, so a fresh install left the agent with nothing to follow.
+- Install is now `npm install ux-atlas`, then `npx ux-atlas init`. npm 12 and later refuse a package installed from a GitHub link, and do not add the pointer to AGENTS.md and CLAUDE.md during the install, so a fresh install failed or left the agent with nothing to follow.
 - The project instructions no longer point at a constitution file that does not exist when the UX Atlas repository is the project root.
 - The design record is written once per pipeline run, at Record, or earlier when you ask for it. The skill used to say both that and "at each accepted stage".
 - UX Writing no longer claims a part in the pipeline's Structure stage. Structure names the empty, error, and exit states there, and UX Writing writes the strings in Surface.
