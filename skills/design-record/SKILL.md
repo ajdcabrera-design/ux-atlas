@@ -18,9 +18,9 @@ excludes:
   - "handoff-only"
 tokenBudget:
   summary: 40
-  body: 1000
+  body: 1300
 metadata:
-  updated: "2026-10-04"
+  updated: "2026-10-07"
   updatedBy: Aaron Cabrera
 ---
 
@@ -41,19 +41,16 @@ Do not write anywhere else. Do not copy the record into the product's source fil
 
 Write only when the turn produced at least one entry below. A change with none writes nothing.
 
-- Guided pipeline: append each stage the partner accepted, at that stop.
-- Express pipeline: append once, at Record.
+- Design pipeline, guided or express: hold entries and append once, at the pipeline's Record. Append earlier only when the partner asks for the record.
 - A narrower skill on its own: append once, after its handback.
 
 Consent follows `record`.
 
-- `on`: write without a choice. The record is not a product change. The constitution's Confirmation does not apply. Say in one line what was written.
+- `on`: write without a choice. A record write is not a product change. Say in one line what was written.
 - `ask`: use the constitution's Confirmation choice once per run, after the work. Options: "Write to the design record" and "Leave it in this reply." When `design-handoff` will also write in this run, the first option is "Write the record and handoff." Accepting covers the rest of this run.
 - `off`: write nothing. Keep the entries in the reply.
 
 The same setting and the same choice cover the handoff spec that `design-handoff` writes. Do not offer a second choice for it.
-
-During the design pipeline, hold entries until the pipeline's Record. Do not offer a second choice in that turn.
 
 ## Run header
 

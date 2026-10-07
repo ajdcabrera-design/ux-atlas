@@ -22,7 +22,7 @@ tokenBudget:
   summary: 50
   body: 900
 metadata:
-  updated: "2026-10-02"
+  updated: "2026-10-07"
   updatedBy: Aaron Cabrera
 ---
 
@@ -35,18 +35,6 @@ The partner is the person in the conversation. They are usually not the end user
 - The request only asks for evidence, what we know about customers or the market, analytics, retention, traffic, drop-off, competitors, or what similar products do. Run this skill. Do not start the design pipeline.
 - The design pipeline has opened Evidence. Run this skill for that move.
 - Do not run during Frame, Define, Scope, Structure, Check, or Surface unless the partner asked for evidence in that turn, or the pipeline opened Evidence.
-
-## Principles
-
-These are the bar. Partner-facing asks stay plain; the principles stay in how you judge the work.
-
-- **Match the question to the method.** Ask only for what would change this decision. Do not run a wide questionnaire for a narrow choice.
-- **Behavior and context beat opinions dressed as users.** Prefer what people did, where they drop off, and what the business already measured over speculative “users would want.”
-- **Watching and measuring beat arguing.** Early, cheap signals beat late debate.
-- **Goals and scenarios need a source.** Do not invent people to justify a path. If the source is thin, say so.
-- **Label the source or do not claim it.** Partner report, attached artifact, and public or market grounding are different. Never pass one off as another.
-- **A shared assumption is not a test with end users.** Partner Accept confirms a bet. It does not validate with customers.
-- **No theater.** Do not invent quotes, counts, personas-as-proof, or “research shows” with nothing behind it.
 
 ## What counts as evidence
 
@@ -70,7 +58,7 @@ Frame each ask so a non-designer understands:
 - Why it helps this decision (value).
 - What you will assume, and what can go wrong, if they do not have it (downside).
 
-Ask only what would change the design. Prefer one or two high-impact questions over a long survey.
+Ask only what would change the design. Prefer one or two high-impact questions over a long survey. Prefer what people did, where they drop off, and what the business already measured over a guess at what users would want.
 
 Treat answers as evidence about the product or audience **as the partner reports it**. Do not rewrite them as “users said” unless the partner’s source was talking to users.
 
@@ -80,7 +68,7 @@ Name a file or export only when it would clearly improve the decision. Confirm t
 
 ### 3. Gap third
 
-If they have no answers and no files, say so. Record the residual risk. Offer labeled market or public grounding when it helps. Do not invent evidence. Do not silently claim research happened.
+If they have no answers and no files, say so. Record the residual risk. Offer labeled market or public grounding when it helps. Do not silently claim research happened.
 
 ## Synthesize
 
@@ -89,8 +77,6 @@ When they answer or attach something, summarize only what the source supports. S
 - What the evidence shows.
 - What you are still assuming.
 - What decision this unlocks or blocks.
-
-Do not pad with theater. Do not produce fake personas, fake quotes, or fake test results.
 
 ## Design pipeline handoff
 

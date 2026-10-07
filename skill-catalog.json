@@ -44,7 +44,7 @@
       "description": "Keep the project's living design record and the DESIGN_GAPS.md register.",
       "triggers": ["record", "decision history", "open gaps", "design gaps", "why decided", "persist decisions"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "design", "handoff-only"],
-      "tokenBudget": { "summary": 40, "body": 1000 }
+      "tokenBudget": { "summary": 40, "body": 1300 }
     },
     "design-handoff": {
       "title": "Design handoff",
@@ -62,7 +62,7 @@
       "description": "Write, rewrite, name, or audit interface copy. Covers voice, tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation.",
       "triggers": ["copy", "wording", "label", "button text", "error message", "empty state", "voice", "tone", "rename button", "audit copy", "interface text"],
       "excludes": ["flow-only", "IA-only", "evidence-only", "direction-only", "layout", "design"],
-      "tokenBudget": { "summary": 45, "body": 850 }
+      "tokenBudget": { "summary": 45, "body": 1400 }
     },
     "structure": {
       "title": "Structure",

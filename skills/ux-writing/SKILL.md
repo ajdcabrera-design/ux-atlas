@@ -1,6 +1,6 @@
 ---
 name: ux-writing
-description: Write, rewrite, name, or audit interface copy. Covers voice and tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation, and copy review across screens. Use when the prompt asks for interface copy or content, asks for words, asks how the product should sound, or asks for a copy audit. During a design pipeline, apply only in Structure for the action and state names, and in Surface for voice then strings. A copy-only request does not start the design pipeline. Do not invent a playful voice for sport. Do not generate marketing assets, logos, or campaigns.
+description: Write, rewrite, name, or audit interface copy. Covers voice and tone, buttons, labels, headings, empty states, errors, success, hints, destructive confirmation, and copy review across screens. Use when the prompt asks for interface copy or content, asks for words, asks how the product should sound, or asks for a copy audit. During a design pipeline, apply only in Surface, after screen-composition, for voice then strings. A copy-only request does not start the design pipeline. Do not invent a playful voice for sport.
 triggers:
   - "copy"
   - "wording"
@@ -22,9 +22,9 @@ excludes:
   - "design"
 tokenBudget:
   summary: 45
-  body: 850
+  body: 1400
 metadata:
-  updated: "2026-10-02"
+  updated: "2026-10-07"
   updatedBy: Aaron Cabrera
 ---
 
@@ -37,9 +37,8 @@ Do not generate marketing assets, campaign decks, logos, or image copy factories
 ## When to run
 
 - The request is only to write, rewrite, name, or audit interface copy, or to set how the product should sound. Run this skill. Do not start the design pipeline.
-- The design pipeline is in Structure. Name the primary action, the empty state, the error, and the exit. One line each. Do not write body copy. Voice stays light here unless the partner asked for it.
 - The design pipeline is in Surface. Settle voice and tone for this screen if needed, then write the strings.
-- Do not run during Frame, Define, Scope, or Check unless the partner asked for words or voice in that turn.
+- Do not run during Frame, Define, Scope, Structure, or Check unless the partner asked for words or voice in that turn.
 
 Ask one question, and only if two audiences would use different words for the same object, or if voice is unknown and the ask needs it. Otherwise use the partner's word and state that assumption.
 
@@ -100,18 +99,11 @@ When the partner asks to audit or review copy across a project or many screens:
 2. Walk the existing interface strings against that voice, tone-by-moment, these writing rules, and the constitution.
 3. Report what breaks voice, tone, clarity, or consistency, with rewritten strings where a fix is needed.
 
-Reading existing product copy in the project is allowed for this audit. Do not expand into marketing asset generation.
+Reading existing product copy in the project is allowed for this audit.
 
 A single block (for example hero landing copy) is ordinary write/rewrite under voice and tone — not a full-project audit.
 
 ## What to hand back
-
-Structure, and nothing more:
-
-- Primary action: …
-- Empty: …
-- Error: …
-- Exit: …
 
 Surface, or a copy-only request: each string labeled with its job. Include only the states the screen has. When voice was decided in this turn, state it once above the strings.
 
