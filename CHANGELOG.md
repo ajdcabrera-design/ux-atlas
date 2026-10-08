@@ -4,6 +4,20 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 8 October 2026
+
+### Added
+
+- Interface review. Ask Atlas to review, critique, or audit an existing screen or flow. It walks one job, checks the constitution's rules, and reports each finding with the rule it breaks, how serious it is, and which skill the fix belongs to. It says what it could not check, and it does not redesign.
+
+### Changed
+
+- The design pipeline's Check uses Interface review. A request to review something and then change it starts at Check, then continues at Structure or Surface depending on what the review found, without asking you to restate the goal.
+
+### Fixed
+
+- The design pipeline names its two stage choices, Accept and Correct, so they read the same in every tool.
+
 ## 7 October 2026
 
 ### Changed

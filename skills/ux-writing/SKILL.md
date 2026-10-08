@@ -20,6 +20,7 @@ excludes:
   - "direction-only"
   - "layout"
   - "design"
+  - "review-only"
 tokenBudget:
   summary: 45
   body: 1400

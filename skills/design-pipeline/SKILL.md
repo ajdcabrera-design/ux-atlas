@@ -1,10 +1,9 @@
 ---
 name: design-pipeline
-description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, critique, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, or direction-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only on explicit opt-in (\"express\", \"fast track\", \"you decide\"). Hands to design-record at end. Constitution owns Confirmation choice."
+description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, direction-only, or review-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only on explicit opt-in (\"express\", \"fast track\", \"you decide\"). Hands to design-record at end. Constitution owns Confirmation choice."
 triggers:
   - "design"
   - "redesign"
-  - "critique"
   - "discuss"
   - "plan"
   - "change a screen"
@@ -24,11 +23,12 @@ excludes:
   - "label"
   - "button text"
   - "handoff-only"
+  - "review-only"
 tokenBudget:
   summary: 60
-  body: 1200
+  body: 1300
 metadata:
-  updated: "2026-10-07"
+  updated: "2026-10-08"
   updatedBy: Aaron Cabrera
 ---
 
@@ -37,12 +37,12 @@ Use this pipeline when a request needs multiple design disciplines or changes wh
 ## Route and resume
 
 - New design starts at Frame; use product-direction there if kind, audience, or outcome is unsettled. A chosen direction is the accepted Frame.
-- Critique starts at Check, using accepted Frame/Define when available and otherwise only the stated goal and evidence. Fidelity starts at Surface only after Structure is accepted; otherwise resume at the next open stage.
+- A request to review and then change something starts at Check, using accepted Frame/Define when available and otherwise only the stated goal and evidence. With no accepted Frame, the stated goal stands in for Frame and Define, marked Assumed, and the accepted findings are the Scope. Continue at Structure when any finding belongs to structure; otherwise continue at Surface, with the existing structure taken as accepted. A review on its own is `interface-review` alone. Fidelity starts at Surface only after Structure is accepted; otherwise resume at the next open stage.
 - Continue the current stage when the partner answers its question. After acceptance, start at the next open stage without asking whether to continue. Before resuming, read `.atlas/decisions.md` and overlapping gaps through `design-record`; do not load run history unless asked.
 
 ## Run the pipeline
 
-Guided is the default: Frame, Define, Scope, Structure, Check, Surface. Present a complete stage proposal and assumptions, then ask its decision using the constitution's inline Choice block. Never show the choice first or add a continue/pause question.
+Guided is the default: Frame, Define, Scope, Structure, Check, Surface. Present a complete stage proposal and assumptions, then ask its decision using the constitution's inline Choice block. The options are Accept and Correct. Never show the choice first or add a continue/pause question.
 
 On Accept, begin the next open stage in the next response. On Correct, revise and stay. Reopening an earlier stage makes later decisions open again. A direction chosen in-pipeline counts as Frame; continue at Define. A direction-only request ends after that choice.
 
@@ -70,7 +70,7 @@ Describe one job's entry, path, primary action, empty/error recovery, cancel/exi
 
 ### 5. Check
 
-Judge the flow against Frame, Define, and the constitution; state passes, failures, and rules. If it fails, return to Define or Structure and name which. This is not user testing; do not offer restyling as a flow repair.
+Apply the `interface-review` skill to the flow, against Frame and Define. If a finding blocks, return to Define or Structure and name which. Do not offer restyling as a flow repair.
 
 ### 6. Surface
 

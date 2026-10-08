@@ -22,9 +22,9 @@ test('the catalog and the skills folder list the same skills', () => {
 });
 
 // Tokens are estimated at four characters each.
-test('the skill index stays under 450 tokens, and no line over 60', () => {
+test('the skill index stays under 500 tokens, and no line over 60', () => {
   const lines = skillIndex(catalog).split('\n').filter((line) => line.startsWith('- '));
-  assert.ok(lines.join('\n').length <= 450 * 4, 'The skill index is over 450 tokens.');
+  assert.ok(lines.join('\n').length <= 500 * 4, 'The skill index is over 500 tokens.');
   for (const line of lines) {
     assert.ok(line.length <= 60 * 4, `This index line is over 60 tokens: ${line}`);
   }

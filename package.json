@@ -1,7 +1,7 @@
 {
   "name": "ux-atlas",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "UX skills for agents. Each skill is skills/<name>/SKILL.md.",
   "license": "MIT",

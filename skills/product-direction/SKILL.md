@@ -15,6 +15,7 @@ excludes:
   - "evidence-only"
   - "screen design"
   - "specific feature"
+  - "review-only"
 tokenBudget:
   summary: 50
   body: 700

@@ -22,11 +22,12 @@ excludes:
   - "path"
   - "organize"
   - "handoff-only"
+  - "review-only"
 tokenBudget:
   summary: 50
   body: 950
 metadata:
-  updated: "2026-10-04"
+  updated: "2026-10-08"
   updatedBy: Aaron Cabrera
 ---
 
@@ -51,7 +52,7 @@ Do not edit the source. Do not add tokens or components to it.
 - The request only asks to lay out or compose a screen, choose components, set hierarchy, or say how it reflows, and the flow is settled. Run this skill. Do not start the design pipeline.
 - The design pipeline is in Surface. Run this skill before ux-writing. Hand the regions and components to ux-writing for the strings.
 - If the path or the places are not settled, say which is missing and stop. Do not invent them to fill the screen.
-- Do not run during Frame, Define, Scope, Structure, or Check. A critique of an existing screen is Check.
+- Do not run during Frame, Define, Scope, Structure, or Check. A review of an existing screen is `interface-review`.
 
 Ask one question, and only if two compositions would lead with different things and the product class does not settle it. Otherwise state the assumption.
 

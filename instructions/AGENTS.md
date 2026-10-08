@@ -12,6 +12,7 @@ Each skill is `node_modules/ux-atlas/skills/<name>/SKILL.md`. This index is the 
 - `structure`: Decide the path through one job and where things live. Use for a flow, a happy path, or what happens on failure, or to organize, place, or name pages and navigation. Not for screen design.
 - `screen-composition`: Compose one screen from the design system: regions, order, components, tokens, states, reflow. Use for layout, hierarchy, or component choice once the flow is settled.
 - `ux-writing`: Write, rewrite, name, or audit interface copy, and set voice and tone. Use for any wording, label, message, or copy review.
+- `interface-review`: Review an existing screen or flow against the constitution and report findings. Use for a review, critique, or audit, or 'what is wrong with this'. Not for copy alone.
 <!-- /skill-index -->
 
 Route from this index. Do not open a skill file to decide whether it applies. When a line matches the request, read that body and follow it. If several match, read the most specific one. Do not read every body up front. Do not preload skills “to be safe.”

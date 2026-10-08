@@ -25,7 +25,7 @@
       "order": 18,
       "description": "Offer two or three directions for an open-ended ask and let the partner choose. Use when kind, audience, or goal is unsettled, such as 'design me an app' or 'how can I improve this' with no goal.",
       "triggers": ["product direction", "what kind of product", "best approach", "design me an app", "how can I improve", "open-ended product"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "screen design", "specific feature"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "screen design", "specific feature", "review-only"],
       "tokenBudget": { "summary": 50, "body": 700 }
     },
     "design-pipeline": {
@@ -33,9 +33,9 @@
       "section": "process",
       "order": 20,
       "description": "Run a design request as staged decisions. Use when the ask needs more than one discipline or changes what to build. Guided by default. Express only on 'express', 'fast track', or 'you decide'.",
-      "triggers": ["design", "redesign", "critique", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product", "express", "fast track"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only"],
-      "tokenBudget": { "summary": 60, "body": 1200 }
+      "triggers": ["design", "redesign", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product", "express", "fast track"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only", "review-only"],
+      "tokenBudget": { "summary": 60, "body": 1300 }
     },
     "design-record": {
       "title": "Design record",
@@ -61,7 +61,7 @@
       "order": 30,
       "description": "Write, rewrite, name, or audit interface copy, and set voice and tone. Use for any wording, label, message, or copy review.",
       "triggers": ["copy", "wording", "label", "button text", "error message", "empty state", "voice", "tone", "rename button", "audit copy", "interface text"],
-      "excludes": ["flow-only", "IA-only", "evidence-only", "direction-only", "layout", "design"],
+      "excludes": ["flow-only", "IA-only", "evidence-only", "direction-only", "layout", "design", "review-only"],
       "tokenBudget": { "summary": 45, "body": 1400 }
     },
     "structure": {
@@ -79,8 +79,17 @@
       "order": 28,
       "description": "Compose one screen from the design system: regions, order, components, tokens, states, reflow. Use for layout, hierarchy, or component choice once the flow is settled.",
       "triggers": ["layout", "compose screen", "component", "visual hierarchy", "reflow", "responsive", "design system", "screen design", "region", "landmark"],
-      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "flow", "path", "organize", "handoff-only"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "flow", "path", "organize", "handoff-only", "review-only"],
       "tokenBudget": { "summary": 50, "body": 950 }
+    },
+    "interface-review": {
+      "title": "Interface review",
+      "section": "disciplines",
+      "order": 32,
+      "description": "Review an existing screen or flow against the constitution and report findings. Use for a review, critique, or audit, or 'what is wrong with this'. Not for copy alone.",
+      "triggers": ["review", "critique", "interface audit", "what is wrong with", "heuristic evaluation", "usability review", "accessibility review"],
+      "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "audit copy", "design", "redesign"],
+      "tokenBudget": { "summary": 55, "body": 1100 }
     }
   }
 }
