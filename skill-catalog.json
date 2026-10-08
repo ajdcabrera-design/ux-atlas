@@ -26,7 +26,7 @@
       "description": "Offer two or three directions for an open-ended ask and let the partner choose. Use when kind, audience, or goal is unsettled, such as 'design me an app' or 'how can I improve this' with no goal.",
       "triggers": ["product direction", "what kind of product", "best approach", "design me an app", "how can I improve", "open-ended product"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "screen design", "specific feature", "review-only"],
-      "tokenBudget": { "summary": 50, "body": 700 }
+      "tokenBudget": { "summary": 50, "body": 900 }
     },
     "design-pipeline": {
       "title": "The Design Pipeline",
@@ -35,7 +35,7 @@
       "description": "Run a design request as staged decisions. Use when the ask needs more than one discipline or changes what to build. Guided by default. Express only on 'express', 'fast track', or 'you decide'.",
       "triggers": ["design", "redesign", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product", "express", "fast track"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only", "review-only"],
-      "tokenBudget": { "summary": 60, "body": 1300 }
+      "tokenBudget": { "summary": 60, "body": 1450 }
     },
     "design-record": {
       "title": "Design record",
@@ -44,7 +44,7 @@
       "description": "Keep the decision record and DESIGN_GAPS.md. Use at the pipeline's Record, or when the partner asks for the record, the decision history, or the open gaps.",
       "triggers": ["record", "decision history", "open gaps", "design gaps", "why decided", "persist decisions"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "design", "handoff-only"],
-      "tokenBudget": { "summary": 40, "body": 1300 }
+      "tokenBudget": { "summary": 40, "body": 1350 }
     },
     "design-handoff": {
       "title": "Design handoff",
@@ -53,7 +53,7 @@
       "description": "Write the handoff spec for an accepted design, by reference to the design system. Use at the pipeline's Record, or when asked to hand off or spec accepted work.",
       "triggers": ["handoff", "hand off", "design spec", "developer handoff", "spec for engineering", "package the design"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "user story", "acceptance criteria"],
-      "tokenBudget": { "summary": 45, "body": 1100 }
+      "tokenBudget": { "summary": 45, "body": 1200 }
     },
     "ux-writing": {
       "title": "UX Writing",
@@ -62,7 +62,7 @@
       "description": "Write, rewrite, name, or audit interface copy, and set voice and tone. Use for any wording, label, message, or copy review.",
       "triggers": ["copy", "wording", "label", "button text", "error message", "empty state", "voice", "tone", "rename button", "audit copy", "interface text"],
       "excludes": ["flow-only", "IA-only", "evidence-only", "direction-only", "layout", "design", "review-only"],
-      "tokenBudget": { "summary": 45, "body": 1400 }
+      "tokenBudget": { "summary": 45, "body": 1450 }
     },
     "structure": {
       "title": "Structure",
@@ -71,7 +71,7 @@
       "description": "Decide the path through one job and where things live. Use for a flow, a happy path, or what happens on failure, or to organize, place, or name pages and navigation. Not for screen design.",
       "triggers": ["flow", "path", "happy path", "steps in order", "what happens when", "cancel", "exit", "error recovery", "user journey", "organize", "group", "place", "name the structure", "navigation", "page structure", "section", "where does", "IA", "information architecture"],
       "excludes": ["copy-only", "evidence-only", "direction-only", "screen design", "layout", "component"],
-      "tokenBudget": { "summary": 60, "body": 1250 }
+      "tokenBudget": { "summary": 60, "body": 1300 }
     },
     "screen-composition": {
       "title": "Screen composition",
@@ -80,7 +80,7 @@
       "description": "Compose one screen from the design system: regions, order, components, tokens, states, reflow. Use for layout, hierarchy, or component choice once the flow is settled.",
       "triggers": ["layout", "compose screen", "component", "visual hierarchy", "reflow", "responsive", "design system", "screen design", "region", "landmark"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "flow", "path", "organize", "handoff-only", "review-only"],
-      "tokenBudget": { "summary": 50, "body": 950 }
+      "tokenBudget": { "summary": 50, "body": 1250 }
     },
     "interface-review": {
       "title": "Interface review",
@@ -89,7 +89,7 @@
       "description": "Review an existing screen or flow against the constitution and report findings. Use for a review, critique, or audit, or 'what is wrong with this'. Not for copy alone.",
       "triggers": ["review", "critique", "interface audit", "what is wrong with", "heuristic evaluation", "usability review", "accessibility review"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "audit copy", "design", "redesign"],
-      "tokenBudget": { "summary": 55, "body": 1100 }
+      "tokenBudget": { "summary": 55, "body": 1250 }
     }
   }
 }

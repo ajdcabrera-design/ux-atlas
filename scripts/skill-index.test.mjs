@@ -39,3 +39,14 @@ test('lists skills in catalog order', () => {
   });
   assert.equal(index, '<!-- skill-index -->\n- `first`: First.\n- `later`: Second.\n<!-- /skill-index -->');
 });
+
+test('each skill body stays within its declared budget', () => {
+  const skillsRoot = path.resolve(path.dirname(catalogPath), 'skills');
+  for (const [name, skill] of Object.entries(catalog.skills)) {
+    const file = fs.readFileSync(path.join(skillsRoot, name, 'SKILL.md'), 'utf8');
+    const [, frontmatter, body] = file.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+    const declared = Number(frontmatter.match(/\n {2}body: (\d+)/)[1]);
+    assert.equal(declared, skill.tokenBudget.body, `${name}: the catalog and the skill declare different body budgets.`);
+    assert.ok(body.length <= declared * 4, `${name}: the body is over its ${declared}-token budget.`);
+  }
+});

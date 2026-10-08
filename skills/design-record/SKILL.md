@@ -18,7 +18,7 @@ excludes:
   - "handoff-only"
 tokenBudget:
   summary: 40
-  body: 1300
+  body: 1350
 metadata:
   updated: "2026-10-07"
   updatedBy: Aaron Cabrera

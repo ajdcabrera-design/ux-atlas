@@ -23,9 +23,9 @@ excludes:
   - "review-only"
 tokenBudget:
   summary: 45
-  body: 1400
+  body: 1450
 metadata:
-  updated: "2026-10-07"
+  updated: "2026-10-09"
   updatedBy: Aaron Cabrera
 ---
 
@@ -39,7 +39,7 @@ Do not generate marketing assets, campaign decks, logos, or image copy factories
 
 - The request is only to write, rewrite, name, or audit interface copy, or to set how the product should sound. Run this skill. Do not start the design pipeline.
 - The design pipeline is in Surface. Settle voice and tone for this screen if needed, then write the strings.
-- Do not run during Frame, Define, Scope, Structure, or Check unless the partner asked for words or voice in that turn.
+- Do not run during Frame, Define, Scope, Structure, Check, or Review unless the partner asked for words or voice in that turn.
 
 Ask one question, and only if two audiences would use different words for the same object, or if voice is unknown and the ask needs it. Otherwise use the partner's word and state that assumption.
 

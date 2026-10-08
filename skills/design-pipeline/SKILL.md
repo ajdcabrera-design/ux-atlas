@@ -26,9 +26,9 @@ excludes:
   - "review-only"
 tokenBudget:
   summary: 60
-  body: 1300
+  body: 1450
 metadata:
-  updated: "2026-10-08"
+  updated: "2026-10-09"
   updatedBy: Aaron Cabrera
 ---
 
@@ -37,12 +37,12 @@ Use this pipeline when a request needs multiple design disciplines or changes wh
 ## Route and resume
 
 - New design starts at Frame; use product-direction there if kind, audience, or outcome is unsettled. A chosen direction is the accepted Frame.
-- A request to review and then change something starts at Check, using accepted Frame/Define when available and otherwise only the stated goal and evidence. With no accepted Frame, the stated goal stands in for Frame and Define, marked Assumed, and the accepted findings are the Scope. Continue at Structure when any finding belongs to structure; otherwise continue at Surface, with the existing structure taken as accepted. A review on its own is `interface-review` alone. Fidelity starts at Surface only after Structure is accepted; otherwise resume at the next open stage.
-- Continue the current stage when the partner answers its question. After acceptance, start at the next open stage without asking whether to continue. Before resuming, read `.atlas/decisions.md` and overlapping gaps through `design-record`; do not load run history unless asked.
+- A request to review and then change an existing interface starts with `interface-review` on what exists; that skill sends it here unless every finding belongs to the build. The stated goal stands in for Frame and Define, marked Assumed. Offer the findings as the Scope, with Accept and Correct. Then continue at Structure when any finding belongs to structure; otherwise at Surface, with the existing structure taken as accepted. A review on its own is `interface-review` alone. Fidelity starts at Surface only after Structure is accepted; otherwise resume at the next open stage.
+- Continue the current stage when the partner answers its question. After acceptance, start at the next open stage without asking whether to continue. When resuming a run from an earlier conversation, first read `.atlas/decisions.md` and overlapping gaps through `design-record`; do not load run history unless asked.
 
 ## Run the pipeline
 
-Guided is the default: Frame, Define, Scope, Structure, Check, Surface. Present a complete stage proposal and assumptions, then ask its decision using the constitution's inline Choice block. The options are Accept and Correct. Never show the choice first or add a continue/pause question.
+Guided is the default: Frame, Define, Scope, Structure, Check, Surface, Review. Present a complete stage proposal and assumptions, then ask its decision using the constitution's inline Choice block. The options are Accept and Correct. Never show the choice first or add a continue/pause question.
 
 On Accept, begin the next open stage in the next response. On Correct, revise and stay. Reopening an earlier stage makes later decisions open again. A direction chosen in-pipeline counts as Frame; continue at Define. A direction-only request ends after that choice.
 
@@ -70,11 +70,15 @@ Describe one job's entry, path, primary action, empty/error recovery, cancel/exi
 
 ### 5. Check
 
-Apply the `interface-review` skill to the flow, against Frame and Define. If a finding blocks, return to Define or Structure and name which. Do not offer restyling as a flow repair.
+Judge the flow against Frame, Define, Scope, and the constitution; state passes, failures, and rules. This is not user testing; do not offer restyling as a flow repair. If it fails, name the stage to return to, Define or Structure, and offer Reopen <stage> in place of Accept.
 
 ### 6. Surface
 
 After accepted Structure, specify regions, hierarchy, components, tokens, states, and reflow from the design system. Apply ux-writing for voice/tone and strings when needed. Mark gaps and unresolved questions; do not present assumptions as sourced rules.
+
+### 7. Review
+
+Apply the `interface-review` skill to the accepted Surface. If there are findings, name the earliest stage they belong to, Structure or Surface, and offer Reopen <stage> in place of Accept; Correct lets the partner dispute or drop a finding. With no findings, Accept moves to Record. Review a revised Surface only for the findings that reopened it.
 
 ## Optional moves
 
@@ -89,6 +93,6 @@ Propose user testing before calling a new or critical flow done, except for smal
 
 ## Record and implementation
 
-After accepted Surface or on request, hand decisions, assumptions, flow, interface, questions, and gaps to `design-record`, which owns the run log and gap register. Do not offer a separate gap choice. Then hand the accepted work to `design-handoff`, which writes the handoff spec under the same record setting and does not ask again.
+After accepted Review or on request, hand decisions, assumptions, flow, interface, questions, and gaps to `design-record`, which owns the run log and gap register. Do not offer a separate gap choice. Then hand the accepted work to `design-handoff`, which writes the handoff spec under the same record setting and does not ask again.
 
 After the record and the handoff spec are written or left in the reply, ask whether to implement using the constitution's choice rules: Implement the change / Leave the change. Do not implement before an explicit choice; choosing an approach is not implementation approval.

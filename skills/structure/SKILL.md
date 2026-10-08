@@ -30,9 +30,9 @@ excludes:
   - "component"
 tokenBudget:
   summary: 60
-  body: 1250
+  body: 1300
 metadata:
-  updated: "2026-10-07"
+  updated: "2026-10-09"
   updatedBy: Aaron Cabrera
 ---
 
@@ -46,7 +46,7 @@ The path is how the person gets through the job. The map is the places the job h
 - The request only asks where something lives, or what a page, step, or section is called, and does not ask to design the screen. Write the map. Do not start the design pipeline.
 - A request for the path does not get the map, and a request for the map does not get the path. Write both only when the request asks for both.
 - The design pipeline is in Structure. Write the path, then the map. Do not write control copy. Do not specify visual style or component anatomy.
-- Do not run during Frame, Define, Scope, Check, or Surface unless the partner asked for the path or the map in that turn.
+- Do not run during Frame, Define, Scope, Check, Surface, or Review unless the partner asked for the path or the map in that turn.
 
 Ask one question, and only if two jobs would produce different paths, or two arrangements would put the same thing in different places. Otherwise use the partner's job and groups and state that assumption. Do not invent a quote, a persona, a metric, a card sort, or a person's mental model.
 

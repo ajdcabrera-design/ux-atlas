@@ -22,7 +22,7 @@ tokenBudget:
   summary: 50
   body: 900
 metadata:
-  updated: "2026-10-07"
+  updated: "2026-10-09"
   updatedBy: Aaron Cabrera
 ---
 
@@ -34,7 +34,7 @@ The partner is the person in the conversation. They are usually not the end user
 
 - The request only asks for evidence, what we know about customers or the market, analytics, retention, traffic, drop-off, competitors, or what similar products do. Run this skill. Do not start the design pipeline.
 - The design pipeline has opened Evidence. Run this skill for that move.
-- Do not run during Frame, Define, Scope, Structure, Check, or Surface unless the partner asked for evidence in that turn, or the pipeline opened Evidence.
+- Do not run during Frame, Define, Scope, Structure, Check, Surface, or Review unless the partner asked for evidence in that turn, or the pipeline opened Evidence.
 
 ## What counts as evidence
 

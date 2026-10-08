@@ -18,7 +18,7 @@ excludes:
   - "review-only"
 tokenBudget:
   summary: 50
-  body: 700
+  body: 900
 metadata:
   updated: "2026-10-07"
   updatedBy: Aaron Cabrera

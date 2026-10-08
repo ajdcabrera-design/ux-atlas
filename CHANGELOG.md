@@ -4,6 +4,25 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 9 October 2026
+
+### Added
+
+- Review, a seventh stage in the design pipeline. After you accept a Surface, Interface review inspects it and reports what breaks before anything is recorded or built. Findings name the stage they return to.
+- Interface review can inspect a written Surface, not only a built screen. It says which stated values it could not verify, and it treats a state or path the Surface leaves out as a finding when a step depends on it.
+- Inside a design pipeline, a finding can cite a decision you accepted, such as Scope, as the rule it breaks.
+
+### Changed
+
+- The design pipeline's Check judges the flow against Frame, Define, Scope, and the constitution, as it did before 8 October. It no longer uses Interface review, which could not report a flow that broke an accepted decision as a failure.
+- When Check fails or Review has findings, the first choice is Reopen, with the name of the stage, in place of Accept.
+- A request to review something and then fix it starts with Interface review. When every finding is a fault in the code, Atlas asks before changing the product and skips the design stages. Otherwise the findings become the Scope and the pipeline continues at Structure or Surface.
+
+### Fixed
+
+- Continuing a pipeline in the same conversation no longer reads the design record first. That happens only when a run resumes from an earlier conversation.
+- Interface review judges colours and sizes that a page's CSS declares, and says they are declared, not measured.
+
 ## 8 October 2026
 
 ### Added

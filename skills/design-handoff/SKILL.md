@@ -18,9 +18,9 @@ excludes:
   - "acceptance criteria"
 tokenBudget:
   summary: 45
-  body: 1100
+  body: 1200
 metadata:
-  updated: "2026-10-04"
+  updated: "2026-10-09"
   updatedBy: Aaron Cabrera
 ---
 
@@ -33,7 +33,7 @@ The spec replaces the mockup, not the user story. It says what the thing is. The
 - The design pipeline reached Record after an accepted Surface. Run after `design-record` takes its entries.
 - The partner asks to hand off, spec, or package design work accepted in this conversation. Run this skill. Do not start the design pipeline.
 - The accepted work is not in this conversation. Say what is missing and stop. `.atlas/decisions.md` alone is not enough to write a spec.
-- Do not run during Frame, Define, Scope, Structure, Check, or Surface. Do not run when nothing was accepted.
+- Do not run during Frame, Define, Scope, Structure, Check, Surface, or Review. Do not run when nothing was accepted.
 
 ## The file
 
