@@ -20,7 +20,7 @@ excludes:
   - "redesign"
 tokenBudget:
   summary: 55
-  body: 1250
+  body: 1300
 metadata:
   updated: "2026-10-15"
   updatedBy: Aaron Cabrera

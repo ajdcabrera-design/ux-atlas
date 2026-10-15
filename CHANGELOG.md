@@ -14,6 +14,11 @@ Write what a person using Atlas can do now.
 - Surface leads with what leads the screen, the strings, the judgment calls, and the open questions. Components, tokens, states, and reflow follow.
 - When the record setting is `ask`, the record choice lists the files and how many entries of each kind they hold. The full contents appear only if you keep them in the reply.
 - The design record logs each finding Atlas repaired during Check or Review, so it still says why the design changed.
+- When you reopen a stage, the design record logs it, with the stage and what reopened it.
+
+### Fixed
+
+- Asking Atlas to design a feature or flow to build, such as "design how a customer cancels a subscription", starts the design pipeline. It used to go to Structure alone and return only the path.
 
 ## 9 October 2026
 

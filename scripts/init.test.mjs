@@ -101,7 +101,13 @@ test('ships no skill that runs before selection', () => {
 test('leaves a shared AGENTS.md and CLAUDE.md file as one pointer', () => {
   const root = tempProject();
   fs.writeFileSync(path.join(root, 'AGENTS.md'), '# Project\n');
-  fs.symlinkSync('AGENTS.md', path.join(root, 'CLAUDE.md'));
+  try {
+    fs.symlinkSync('AGENTS.md', path.join(root, 'CLAUDE.md'));
+  } catch (error) {
+    // Windows needs Developer Mode or admin rights for symlinks; a hard link shares the file too.
+    if (error.code !== 'EPERM') throw error;
+    fs.linkSync(path.join(root, 'AGENTS.md'), path.join(root, 'CLAUDE.md'));
+  }
   applyPointers(root);
   const text = fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8');
   assert.match(text, /^# Project\n/);

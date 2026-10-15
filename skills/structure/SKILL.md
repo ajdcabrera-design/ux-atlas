@@ -1,6 +1,6 @@
 ---
 name: structure
-description: Decide how someone finishes one job and where things live. Covers the path (main success path, branches, empty and error recovery, cancel, exit) and the map (pages, steps, sections, navigation labels). Use when the prompt asks for a flow, path, steps in order, happy path, or what happens when something fails, or asks to organize, group, place, or name the structure, and does not ask to design the screen. A request for the path or the map gets only that part. During a design pipeline, apply only in Structure. A flow-only or structure-only request does not start the design pipeline.
+description: Decide how someone finishes one job and where things live. Covers the path (main success path, branches, empty and error recovery, cancel, exit) and the map (pages, steps, sections, navigation labels). Use when the prompt asks for a flow, path, steps in order, happy path, or what happens when something fails, or asks to organize, group, place, or name the structure, and does not ask to design the screen or a feature to build. A request for the path or the map gets only that part. During a design pipeline, apply only in Structure. A flow-only or structure-only request does not start the design pipeline.
 triggers:
   - "flow"
   - "path"
@@ -32,7 +32,7 @@ tokenBudget:
   summary: 60
   body: 1300
 metadata:
-  updated: "2026-10-09"
+  updated: "2026-10-15"
   updatedBy: Aaron Cabrera
 ---
 

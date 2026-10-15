@@ -32,7 +32,7 @@
       "title": "The Design Pipeline",
       "section": "process",
       "order": 20,
-      "description": "Run a design request as staged decisions. Use when the ask needs more than one discipline or changes what to build. Guided by default. Express only on 'express', 'fast track', or 'you decide'.",
+      "description": "Run a design request as staged decisions. Use to design a feature, flow, or screen to build, or when the ask needs more than one discipline. Guided by default. Express only on 'express', 'fast track', or 'you decide'.",
       "triggers": ["design", "redesign", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product", "express", "fast track"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only", "review-only"],
       "tokenBudget": { "summary": 60, "body": 1600 }
@@ -44,7 +44,7 @@
       "description": "Keep the decision record and DESIGN_GAPS.md. Use at the pipeline's Record, or when the partner asks for the record, the decision history, or the open gaps.",
       "triggers": ["record", "decision history", "open gaps", "design gaps", "why decided", "persist decisions"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "design", "handoff-only"],
-      "tokenBudget": { "summary": 40, "body": 1400 }
+      "tokenBudget": { "summary": 40, "body": 1450 }
     },
     "design-handoff": {
       "title": "Design handoff",
@@ -68,7 +68,7 @@
       "title": "Structure",
       "section": "disciplines",
       "order": 24,
-      "description": "Decide the path through one job and where things live. Use for a flow, a happy path, or what happens on failure, or to organize, place, or name pages and navigation. Not for screen design.",
+      "description": "Decide the path through one job and where things live. Use when the ask is only a flow, a happy path, what happens on failure, or where pages and navigation go. Not to design a feature or screen.",
       "triggers": ["flow", "path", "happy path", "steps in order", "what happens when", "cancel", "exit", "error recovery", "user journey", "organize", "group", "place", "name the structure", "navigation", "page structure", "section", "where does", "IA", "information architecture"],
       "excludes": ["copy-only", "evidence-only", "direction-only", "screen design", "layout", "component"],
       "tokenBudget": { "summary": 60, "body": 1300 }
@@ -89,7 +89,7 @@
       "description": "Review an existing screen or flow against the constitution and report findings. Use for a review, critique, or audit, or 'what is wrong with this'. Not for copy alone.",
       "triggers": ["review", "critique", "interface audit", "what is wrong with", "heuristic evaluation", "usability review", "accessibility review"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "audit copy", "design", "redesign"],
-      "tokenBudget": { "summary": 55, "body": 1250 }
+      "tokenBudget": { "summary": 55, "body": 1300 }
     }
   }
 }

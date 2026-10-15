@@ -93,6 +93,6 @@ Propose user testing before calling a new or critical flow done, except for smal
 
 ## Record and implementation
 
-After accepted Surface or on request, hand decisions, assumptions, repaired findings, flow, interface, questions, and gaps to `design-record`, which owns the run log and gap register. Do not offer a separate gap choice. Then hand the accepted work to `design-handoff`, which writes the handoff spec under the same record setting and does not ask again.
+After accepted Surface or on request, hand decisions, assumptions, repaired findings, reopens, flow, interface, questions, and gaps to `design-record`, which owns the run log and gap register. Do not offer a separate gap choice. Then hand the accepted work to `design-handoff`, which writes the handoff spec under the same record setting and does not ask again.
 
 After the record and the handoff spec are written or left in the reply, ask whether to implement using the constitution's choice rules: Implement the change / Leave the change. Do not implement before an explicit choice; choosing an approach is not implementation approval.

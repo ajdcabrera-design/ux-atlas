@@ -18,7 +18,7 @@ excludes:
   - "handoff-only"
 tokenBudget:
   summary: 40
-  body: 1400
+  body: 1450
 metadata:
   updated: "2026-10-15"
   updatedBy: Aaron Cabrera
@@ -81,7 +81,7 @@ One line per entry. At most about 200 characters.
 - `why` and `rejected` only on Decided and Rejected. One clause each.
 - `supersedes` when the entry replaces an earlier decision.
 
-Do not write a transcript. Do not log Frame restatements, questions, or work that the partner corrected before accepting. Do log each Check or Review finding the agent repaired before showing the stage: a Return, `by: agent`, with the finding and the repair.
+Do not write a transcript. Do not log Frame restatements, questions, or work that the partner corrected before accepting. Do log each Check or Review finding the agent repaired before showing the stage: a Return, `by: agent`, with the finding and the repair. When the partner reopens a stage, log a Return, `by: partner`, naming the stage and what reopened it.
 
 ## Automated triggers
 
