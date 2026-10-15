@@ -1,6 +1,6 @@
 ---
 name: design-pipeline
-description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, direction-only, or review-only asks (use those skills alone). Guided default (one stage per decision; Accept starts the next stage at once). Express only on explicit opt-in (\"express\", \"fast track\", \"you decide\"). Hands to design-record at end. Constitution owns Confirmation choice."
+description: "Turn a design request into a sequence of decisions. Use when asked to design, redesign, discuss, plan, or change a screen, flow, feature, or product — AND the ask needs more than one of: flow, IA, composition, writing, evidence, or direction. Do NOT use for copy-only, flow-only, IA-only, evidence-only, direction-only, or review-only asks (use those skills alone). Guided default (one decision per stage; Check and Review run before their stage is shown; Accept starts the next stage at once). Express only on explicit opt-in (\"express\", \"fast track\", \"you decide\"). Hands to design-record at end. Constitution owns Confirmation choice."
 triggers:
   - "design"
   - "redesign"
@@ -26,9 +26,9 @@ excludes:
   - "review-only"
 tokenBudget:
   summary: 60
-  body: 1450
+  body: 1600
 metadata:
-  updated: "2026-10-09"
+  updated: "2026-10-15"
   updatedBy: Aaron Cabrera
 ---
 
@@ -42,13 +42,13 @@ Use this pipeline when a request needs multiple design disciplines or changes wh
 
 ## Run the pipeline
 
-Guided is the default: Frame, Define, Scope, Structure, Check, Surface, Review. Present a complete stage proposal and assumptions, then ask its decision using the constitution's inline Choice block. The options are Accept and Correct. Never show the choice first or add a continue/pause question.
+Guided is the default: Frame, Define, Scope, Structure, Check, Surface, Review. Present a complete stage proposal and any new assumptions, then ask its decision using the constitution's inline Choice block. The options are Accept and Correct. Never show the choice first or add a continue/pause question.
 
-On Accept, begin the next open stage in the next response. On Correct, revise and stay. Reopening an earlier stage makes later decisions open again. A direction chosen in-pipeline counts as Frame; continue at Define. A direction-only request ends after that choice.
+On Accept, begin the next open stage in the next response. On Correct, revise and stay. Show what changed, what else the change touches, and one line naming what stands. Do not show accepted parts again unchanged. Reopening an earlier stage opens later stages only where the change touches them. Name those; the rest stay accepted. A direction chosen in-pipeline counts as Frame; continue at Define. A direction-only request ends after that choice.
 
 Express requires explicit opt-in: "express", "fast track", "you decide", or the same in other words. Mark unresolved partner-specific details as assumptions. Present each remaining stage as a distinct block in one response, with no guided waits. End after Record, then ask separately about implementation. If the partner names a stage or asks for guided, say "Express ended. <Stage> is open." and return to it in Guided.
 
-Ask only questions the partner must answer and keep assumptions visible. Propose optional Evidence, Another structure, or Test only under these rules; never run them silently.
+Ask only questions the partner must answer. State each assumption once, with an id. Later, cite the id only where a decision rests on it. Propose optional Evidence, Another structure, or Test only under these rules; never run them silently.
 
 ## Stages
 
@@ -58,7 +58,7 @@ State person, situation, and outcome; separate the request from assumptions. Ask
 
 ### 2. Define
 
-Write the user need and outcome briefly. Set product class only when it changes Structure's priorities. If obvious, mark it Assumed or Decided without another decision. Stopping because there is no user need is valid.
+Write the user need and outcome briefly. Set product class only when it changes Structure's priorities. Define is its own stop. If the product class is obvious, mark the class Assumed or Decided without asking about it. Stopping because there is no user need is valid.
 
 ### 3. Scope
 
@@ -66,19 +66,19 @@ List In, Out, and Later. Every In item serves Define; preserve partner constrain
 
 ### 4. Structure
 
-Describe one job's entry, path, primary action, empty/error recovery, cancel/exit, and relevant alternate path. Apply the `structure` skill; name a rejected alternative and why. No visual styling or component anatomy. Surface waits for acceptance.
+Describe one job's entry, path, primary action, empty/error recovery, cancel/exit, and relevant alternate path. Apply the `structure` skill; name a rejected alternative and why. No visual styling or component anatomy. Run Check before showing it. Surface waits for acceptance.
 
 ### 5. Check
 
-Judge the flow against Frame, Define, Scope, and the constitution; state passes, failures, and rules. This is not user testing; do not offer restyling as a flow repair. If it fails, name the stage to return to, Define or Structure, and offer Reopen <stage> in place of Accept.
+Judge the drafted flow against Frame, Define, Scope, and the constitution. This is not user testing; never offer restyling as a flow repair. Repair what Structure can fix alone, and check the repair. Show Structure with passes in one line, each repair in one line, and each finding the partner must settle: one that needs their fact, one you dispute, or one that belongs to Define or Scope, which offers Reopen <stage> in place of Accept. After a Correct, check only what changed.
 
 ### 6. Surface
 
-After accepted Structure, specify regions, hierarchy, components, tokens, states, and reflow from the design system. Apply ux-writing for voice/tone and strings when needed. Mark gaps and unresolved questions; do not present assumptions as sourced rules.
+After accepted Structure, apply screen-composition from the design system, then ux-writing for voice, tone, and strings. Lead with what leads the screen, the strings, the calls that needed judgment, and open questions; then regions, components, tokens, states, and reflow. Mark gaps; do not present assumptions as sourced rules. Run Review before showing it.
 
 ### 7. Review
 
-Apply the `interface-review` skill to the accepted Surface. If there are findings, name the earliest stage they belong to, Structure or Surface, and offer Reopen <stage> in place of Accept; Correct lets the partner dispute or drop a finding. With no findings, Accept moves to Record. Review a revised Surface only for the findings that reopened it.
+Apply the `interface-review` skill to the drafted Surface, and handle its findings as Check does. A finding that belongs to Structure offers Reopen Structure in place of Accept. Correct lets the partner dispute or drop a finding.
 
 ## Optional moves
 
@@ -93,6 +93,6 @@ Propose user testing before calling a new or critical flow done, except for smal
 
 ## Record and implementation
 
-After accepted Review or on request, hand decisions, assumptions, flow, interface, questions, and gaps to `design-record`, which owns the run log and gap register. Do not offer a separate gap choice. Then hand the accepted work to `design-handoff`, which writes the handoff spec under the same record setting and does not ask again.
+After accepted Surface or on request, hand decisions, assumptions, repaired findings, flow, interface, questions, and gaps to `design-record`, which owns the run log and gap register. Do not offer a separate gap choice. Then hand the accepted work to `design-handoff`, which writes the handoff spec under the same record setting and does not ask again.
 
 After the record and the handoff spec are written or left in the reply, ask whether to implement using the constitution's choice rules: Implement the change / Leave the change. Do not implement before an explicit choice; choosing an approach is not implementation approval.

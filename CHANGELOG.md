@@ -4,6 +4,17 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 15 October 2026
+
+### Changed
+
+- In a guided design pipeline, Check and Review run before you see Structure and Surface. Each one arrives with what passed and what Atlas repaired. It stops for a finding only when you need to settle it. Check and Review no longer ask you to accept work you then read again.
+- When you correct or reopen a stage, Atlas shows what changed, what else it touches, and what still stands, not the whole stage again. Reopening an earlier stage opens later stages only where the change reaches them.
+- Each assumption is stated once, with an id, and cited by that id afterwards.
+- Surface leads with what leads the screen, the strings, the judgment calls, and the open questions. Components, tokens, states, and reflow follow.
+- When the record setting is `ask`, the record choice lists the files and how many entries of each kind they hold. The full contents appear only if you keep them in the reply.
+- The design record logs each finding Atlas repaired during Check or Review, so it still says why the design changed.
+
 ## 9 October 2026
 
 ### Added

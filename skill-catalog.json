@@ -35,7 +35,7 @@
       "description": "Run a design request as staged decisions. Use when the ask needs more than one discipline or changes what to build. Guided by default. Express only on 'express', 'fast track', or 'you decide'.",
       "triggers": ["design", "redesign", "discuss", "plan", "change a screen", "change a flow", "change a feature", "change a product", "express", "fast track"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "rename", "word", "label", "button text", "handoff-only", "review-only"],
-      "tokenBudget": { "summary": 60, "body": 1450 }
+      "tokenBudget": { "summary": 60, "body": 1600 }
     },
     "design-record": {
       "title": "Design record",
@@ -44,7 +44,7 @@
       "description": "Keep the decision record and DESIGN_GAPS.md. Use at the pipeline's Record, or when the partner asks for the record, the decision history, or the open gaps.",
       "triggers": ["record", "decision history", "open gaps", "design gaps", "why decided", "persist decisions"],
       "excludes": ["copy-only", "flow-only", "IA-only", "evidence-only", "direction-only", "design", "handoff-only"],
-      "tokenBudget": { "summary": 40, "body": 1350 }
+      "tokenBudget": { "summary": 40, "body": 1400 }
     },
     "design-handoff": {
       "title": "Design handoff",

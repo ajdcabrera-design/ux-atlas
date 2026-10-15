@@ -22,7 +22,7 @@ tokenBudget:
   summary: 55
   body: 1250
 metadata:
-  updated: "2026-10-09"
+  updated: "2026-10-15"
   updatedBy: Aaron Cabrera
 ---
 
@@ -34,7 +34,7 @@ This is an inspection by one reviewer. It is not a test with users. Do not write
 
 - The request only asks to review, critique, audit, or check an existing screen or flow, or asks what is wrong with it. Run this skill. Do not start the design pipeline.
 - The request is to review and then fix. When every finding belongs to the build, end on the constitution's choice before a product change. Otherwise follow the design pipeline's route.
-- The design pipeline is in Review. Review the accepted Surface and hand the findings to that stage.
+- The design pipeline is in Review. Review the drafted Surface before it is shown; hand the findings back.
 - The request is to audit copy and nothing else. That is UX Writing.
 - The request is to improve something and names no goal. That is product direction.
 - Do not run during another pipeline stage unless the partner asked for a review in that turn. Then give the findings and offer that stage's decision again.

@@ -18,9 +18,9 @@ excludes:
   - "handoff-only"
 tokenBudget:
   summary: 40
-  body: 1350
+  body: 1400
 metadata:
-  updated: "2026-10-07"
+  updated: "2026-10-15"
   updatedBy: Aaron Cabrera
 ---
 
@@ -47,7 +47,7 @@ Write only when the turn produced at least one entry below. A change with none w
 Consent follows `record`.
 
 - `on`: write without a choice. A record write is not a product change. Say in one line what was written.
-- `ask`: use the constitution's Confirmation choice once per run, after the work. Options: "Write to the design record" and "Leave it in this reply." When `design-handoff` will also write in this run, the first option is "Write the record and handoff." Accepting covers the rest of this run.
+- `ask`: use the constitution's Confirmation choice once per run, after the work. The work at that stop is a summary: each file to be written and the count of each kind of entry. Show contents only when the partner takes the second option or asks. Options: "Write to the design record" and "Leave it in this reply." When `design-handoff` will also write in this run, the first option is "Write the record and handoff." Accepting covers the rest of this run.
 - `off`: write nothing. Keep the entries in the reply.
 
 The same setting and the same choice cover the handoff spec that `design-handoff` writes. Do not offer a second choice for it.
@@ -81,7 +81,7 @@ One line per entry. At most about 200 characters.
 - `why` and `rejected` only on Decided and Rejected. One clause each.
 - `supersedes` when the entry replaces an earlier decision.
 
-Do not write a transcript. Do not log Frame restatements, questions, or work that the partner corrected before accepting.
+Do not write a transcript. Do not log Frame restatements, questions, or work that the partner corrected before accepting. Do log each Check or Review finding the agent repaired before showing the stage: a Return, `by: agent`, with the finding and the repair.
 
 ## Automated triggers
 
