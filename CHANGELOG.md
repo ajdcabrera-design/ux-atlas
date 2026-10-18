@@ -17,6 +17,7 @@ Write what a person using Atlas can do now.
 
 - In a guided design pipeline, Scope starts by checking what already exists for the job. Something already built is listed as Reuse or Out, not designed again.
 - With no `DESIGN.md`, Screen composition uses the tokens and components that Project scan finds in the codebase.
+- When Screen composition needs what the code has for a component or token, such as its variants, states, or size, it looks it up through Project scan, so the next run finds it in the area note instead of reading the code again. This holds with or without a `DESIGN.md`.
 
 ## 15 October 2026
 

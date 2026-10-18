@@ -28,7 +28,7 @@ tokenBudget:
   summary: 50
   body: 1250
 metadata:
-  updated: "2026-10-09"
+  updated: "2026-10-18"
   updatedBy: Aaron Cabrera
 ---
 
@@ -45,6 +45,8 @@ Use the first source that exists. Do not stop the task to ask for one.
 3. **Neither.** Say once, in one line, that no design system was found. Continue with industry-standard defaults. Record "Assumed: industry defaults" once. Do not list each gap.
 
 Where a source exists but lacks something, fill it with the industry standard and record it as a system gap marked Assumed. Never present an assumed value as the source.
+
+When you need what the code has for a component or token, such as its variants, states, or size, get it through `project-scan`, so its area note keeps it.
 
 Do not edit the source. Do not add tokens or components to it.
 
