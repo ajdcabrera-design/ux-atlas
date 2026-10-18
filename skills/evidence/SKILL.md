@@ -18,6 +18,7 @@ excludes:
   - "IA-only"
   - "direction-only"
   - "design"
+  - "scan-only"
 tokenBudget:
   summary: 50
   body: 900

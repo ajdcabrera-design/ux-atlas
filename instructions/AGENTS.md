@@ -3,13 +3,14 @@ Before choosing a skill, restate the request to yourself. Hold what needs to cha
 Each skill is `node_modules/ux-atlas/skills/<name>/SKILL.md`. This index is the disclosure layer. The body is the rule set.
 
 <!-- skill-index -->
-- `ux-constitution`: Interface rules for interaction, psychology, perception, and accessibility. Read when interface work needs a threshold, exception, or example the summary below does not settle.
+- `ux-constitution`: Interface rules for interaction, psychology, perception, and accessibility. Read when the summary below does not settle a threshold, exception, or example.
 - `evidence`: Ground a decision in evidence the partner can give or confirm. Use when asked what we know about users, the market, analytics, drop-off, or competitors. An evidence-only ask does not start the pipeline.
-- `product-direction`: Offer two or three directions for an open-ended ask and let the partner choose. Use when kind, audience, or goal is unsettled, such as 'design me an app' or 'how can I improve this' with no goal.
+- `project-scan`: Check what the project already has before a design choice, and if a handoff was built. Keeps notes for later runs.
+- `product-direction`: Offer two or three directions when kind, audience, or goal is unsettled, such as 'design me an app' or 'how can I improve this' with no goal.
 - `design-pipeline`: Run a design request as staged decisions. Use to design a feature, flow, or screen to build, or when the ask needs more than one discipline. Guided by default. Express only on 'express', 'fast track', or 'you decide'.
 - `design-record`: Keep the decision record and DESIGN_GAPS.md. Use at the pipeline's Record, or when the partner asks for the record, the decision history, or the open gaps.
 - `design-handoff`: Write the handoff spec for an accepted design, by reference to the design system. Use at the pipeline's Record, or when asked to hand off or spec accepted work.
-- `structure`: Decide the path through one job and where things live. Use when the ask is only a flow, a happy path, what happens on failure, or where pages and navigation go. Not to design a feature or screen.
+- `structure`: Decide the path through one job and where things live. Use when the ask is only a flow, a failure path, or where pages and navigation go. Not to design a feature or screen.
 - `screen-composition`: Compose one screen from the design system: regions, order, components, tokens, states, reflow. Use for layout, hierarchy, or component choice once the flow is settled.
 - `ux-writing`: Write, rewrite, name, or audit interface copy, and set voice and tone. Use for any wording, label, message, or copy review.
 - `interface-review`: Review an existing screen or flow against the constitution and report findings. Use for a review, critique, or audit, or 'what is wrong with this'. Not for copy alone.

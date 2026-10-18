@@ -35,7 +35,7 @@ All paths are at the project root.
 - `DESIGN_GAPS.md` — open gaps only.
 - `.atlas/config.json` — `record` is `on`, `ask`, or `off`. A missing file or key means `ask`.
 
-Do not write anywhere else. Do not copy the record into the product's source files.
+Do not write anywhere else. `.atlas/scan/` belongs to `project-scan`, not the record. Do not copy the record into the product's source files.
 
 ## When to write
 

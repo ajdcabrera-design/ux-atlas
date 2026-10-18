@@ -16,6 +16,8 @@ excludes:
   - "direction-only"
   - "user story"
   - "acceptance criteria"
+  - "scan-only"
+  - "implementation check"
 tokenBudget:
   summary: 45
   body: 1200
@@ -39,7 +41,7 @@ The spec replaces the mockup, not the user story. It says what the thing is. The
 
 `.atlas/handoff/<at>-<slug>.md` at the project root. One file per run. `<at>` is UTC, `YYYY-MM-DDTHH-MMZ`. `<slug>` is three to five words from the job. Screens that serve the same job share the file.
 
-Never edit or delete an earlier file. A new run for the same job writes a new file and names the earlier one in `supersedes`. The latest file for a job is the current one. Do not update a spec to match the code after it is built. The code is then the truth.
+Never edit or delete an earlier file. A new run for the same job writes a new file and names the earlier one in `supersedes`. The latest file for a job is the current one. Do not update a spec to match the code after it is built. The code is then the truth. `project-scan` reports whether it was built.
 
 The spec is not a product change. Consent follows `record` in `.atlas/config.json`.
 

@@ -4,6 +4,20 @@ Under that date, use Added, Changed, or Fixed.
 Write what a person using Atlas can do now.
 -->
 
+## 18 October 2026
+
+### Added
+
+- Project scan, a skill that checks what your project already has before a design decision: screens, components and their variants, tokens, and patterns already solved elsewhere. Ask "what can we reuse for this?" or "what already exists?" and it reports what to reuse, what is missing, and what it did not check.
+- Project scan checks whether a handoff was built. Ask "is the handoff built?" and each part of the spec comes back Built, Drifted, Missing, or Not checked, with the file and line. It never edits the handoff.
+- Project scan keeps short notes in `.atlas/scan/`, one per area, stamped with file hashes. A later run or a new conversation reuses a note while its files are unchanged, and rereads only the files that changed. Set `"scan": "off"` in `.atlas/config.json` to stop it writing them.
+- `npx ux-atlas scan` writes a structural index of your components, props, variants, token names, and routes to `.atlas/scan/index.md`, so scans search it instead of the whole codebase.
+
+### Changed
+
+- In a guided design pipeline, Scope starts by checking what already exists for the job. Something already built is listed as Reuse or Out, not designed again.
+- With no `DESIGN.md`, Screen composition uses the tokens and components that Project scan finds in the codebase.
+
 ## 15 October 2026
 
 ### Changed

@@ -23,6 +23,7 @@ excludes:
   - "organize"
   - "handoff-only"
   - "review-only"
+  - "scan-only"
 tokenBudget:
   summary: 50
   body: 1250
@@ -40,7 +41,7 @@ User flow names the path. Information architecture names places. UX Writing writ
 Use the first source that exists. Do not stop the task to ask for one.
 
 1. **`DESIGN.md`.** A file named exactly `DESIGN.md` at the project root is the design system. Use its tokens, components, and layout guidance. A file with another name, casing, or location is not.
-2. **Codebase.** With no `DESIGN.md`, use the tokens and primitives the codebase already has, such as theme values, CSS custom properties, and shared components. Name where they live.
+2. **Codebase.** With no `DESIGN.md`, use the tokens and primitives the codebase already has, as `project-scan` reports them. Name where they live.
 3. **Neither.** Say once, in one line, that no design system was found. Continue with industry-standard defaults. Record "Assumed: industry defaults" once. Do not list each gap.
 
 Where a source exists but lacks something, fill it with the industry standard and record it as a system gap marked Assumed. Never present an assumed value as the source.

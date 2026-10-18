@@ -1,7 +1,7 @@
 {
   "name": "ux-atlas",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "description": "UX skills for agents. Each skill is skills/<name>/SKILL.md.",
   "license": "MIT",
@@ -12,7 +12,8 @@
   "files": [
     "skills",
     "instructions",
-    "scripts/init.mjs"
+    "scripts/init.mjs",
+    "scripts/scan.mjs"
   ],
   "bin": {
     "ux-atlas": "scripts/init.mjs"

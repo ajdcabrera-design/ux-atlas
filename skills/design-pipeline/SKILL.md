@@ -24,6 +24,7 @@ excludes:
   - "button text"
   - "handoff-only"
   - "review-only"
+  - "scan-only"
 tokenBudget:
   summary: 60
   body: 1600
@@ -62,7 +63,7 @@ Write the user need and outcome briefly. Set product class only when it changes 
 
 ### 3. Scope
 
-List In, Out, and Later. Every In item serves Define; preserve partner constraints and state what is not being built.
+First apply `project-scan` to the job's area. What already exists is Reuse or Out. List In, Out, and Later. Every In item serves Define; preserve partner constraints and state what is not being built.
 
 ### 4. Structure
 

@@ -18,6 +18,7 @@ excludes:
   - "audit copy"
   - "design"
   - "redesign"
+  - "scan-only"
 tokenBudget:
   summary: 55
   body: 1300

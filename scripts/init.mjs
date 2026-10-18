@@ -47,6 +47,8 @@ export const recordGuide = [
   '',
   'Handoff specs live in `.atlas/handoff/`, one timestamped file per run. The latest file for a job is the current one. The same `record` setting controls when they are written.',
   '',
+  '`.atlas/scan/` is a cache of what the project already has, so later runs do not scan it again. It is not the record. Run `npx ux-atlas scan` to refresh its index. Add `"scan": "off"` to the config to stop Atlas writing it.',
+  '',
 ].join('\n');
 
 function packageRoot() {
@@ -112,6 +114,10 @@ const invokedDirectly =
 
 if (invokedDirectly && process.argv.includes('brief')) {
   console.log(briefRemovedMessage);
+} else if (invokedDirectly && process.argv[2] === 'scan') {
+  const { writeIndex } = await import('./scan.mjs');
+  const { files, directory } = writeIndex(resolveProjectRoot());
+  console.log(`ux-atlas: indexed ${files} files in ${directory}.`);
 } else if (invokedDirectly && !shouldSkip()) {
   try {
     applyPointers(resolveProjectRoot());
